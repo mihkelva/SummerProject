@@ -1,0 +1,9 @@
+body {
+    color: aqua;
+}
+
+.mainText {
+    font-size: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 15vw;
+}

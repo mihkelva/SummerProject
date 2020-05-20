@@ -1,0 +1,37 @@
+<p>Esita meile uus projekt!</p>
+
+<form >
+    <div class="form-group half">
+        <label for="name">Nimi:</label>
+        <input type="text" class="form-control half" id="name">    
+    </div>
+    <div class="form-group half">
+        <label for="phone">Telefoninumber:</label>
+        <input type="number" class="form-control half" id="phone">    
+    </div>
+    <div class="form-group half">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">    
+    </div>
+    <div class="form-group half">
+        <label for="project_name">Projekti nimi:</label>
+        <input type="text" class="form-control" id="project_name">    
+    </div>
+    <div class="form-group">
+        <label for="description">Projekti lühikirjeldus:</label>
+        <textarea type="text" class="form-control" id="description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="support">Kuidas saan toetada tudengit:</label>
+        <textarea type="text" class="form-control" id="support"></textarea>    
+    </div>
+    <div class="form-group">
+        <label for="additional">Kas soovid veel midagi lisada?</label>
+        <textarea type="text" class="form-control" id="additional"></textarea>    
+    </div>
+    <button 
+        type="button" 
+        class="btn btn-primary"
+        (click)="onAddNewProject()"
+        >SAADA</button>
+</form>
