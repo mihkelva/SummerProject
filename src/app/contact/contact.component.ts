@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  name;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmitForm() {
+
   }
 
 }

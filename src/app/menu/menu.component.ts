@@ -17,4 +17,5 @@ export class MenuComponent implements OnInit {
     el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
+
 }
