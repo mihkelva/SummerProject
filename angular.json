@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SummerProject"
+    }
+  },
+  "defaultProject": "SummerProject",
+  "cli": {
+    "analytics": false
+  }
 }
