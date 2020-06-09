@@ -1,5 +1,6 @@
-import { ProjectService } from './../project.service';
+import { Project } from './project.model';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-new-project',
@@ -14,8 +15,18 @@ export class NewProjectComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddNewProject() {
-    console.log("Töötab");
+  onAddNewProject(form: NgForm) {
+    var formValue = form.value;
+    
+    new Project(
+      formValue.name, 
+      formValue.phone,
+      formValue.email,
+      formValue.project_name,
+      formValue.description,
+      formValue.support,
+      formValue.additional
+      );
   }
 
   
