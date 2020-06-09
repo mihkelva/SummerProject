@@ -5,7 +5,7 @@
 <p class="contact">Kontakteeru...</p>
 <form (ngSubmit)="onSubmitForm()">
     <div class="form-group">
-        <label for="name">Nimi:</label>
+        <label>Nimi: <span class="requiredRed">*</span></label>
         <input
             ngModel 
             type="text" 
@@ -14,17 +14,36 @@
             name="name">    
     </div>
     <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email">    
+        <label>Email address: <span class="requiredRed">*</span></label>
+        <input 
+            type="email" 
+            class="form-control" 
+            id="email">    
     </div>
     <div class="form-group">
-        <label for="subject">Teema:</label>
-        <input type="subject" class="form-control" id="subject">    
+        <label>Telefoninumber: </label>
+        <input 
+            type="tel" 
+            class="form-control" 
+            id="email">    
     </div>
     <div class="form-group">
-        <label for="message">Kiri:</label>
-        <textarea type="message" class="form-control" id="message"></textarea>    
+        <label>Teema: <span class="requiredRed">*</span></label>
+        <input 
+            type="subject" 
+            class="form-control" 
+            id="subject">    
     </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">SAADA</button>
+    <div class="form-group">
+        <label>Kiri: <span class="requiredRed">*</span></label>
+        <textarea 
+            type="message" 
+            class="form-control" 
+            id="message"></textarea>    
+    </div>
+    <button 
+            type="button" 
+            [disabled]="false" 
+            class="btn btn-dti mt-3">SAADA</button>
 </form>
 <br>
