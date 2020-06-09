@@ -1,3 +1,10 @@
 <p class="middleHeader">Tehtud tööd </p>
 
-<p>List töödest..........</p>
+<section>
+    <br>
+    <ks-carousel [id]="111" [images]="imagesRect"
+                 [carouselConfig]="{maxWidth: '1000px', maxHeight: '600px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: true, legacyIE11Mode: false}"
+                 [previewConfig]="{visible: true, number: 5, width: 'auto', maxHeight: '150px'}">
+      <div class="projected">TEHTUD PROJEKTID</div>
+    </ks-carousel>
+  </section>
