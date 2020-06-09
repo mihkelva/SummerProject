@@ -1,3 +1,4 @@
+import { ProjectService } from './../project.service';
 import { Project } from './project.model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -10,15 +11,14 @@ import { NgForm } from '@angular/forms';
 export class NewProjectComponent implements OnInit {
   // projectForm: FormGroup;
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
   }
 
   onAddNewProject(form: NgForm) {
-    var formValue = form.value;
-    
-    new Project(
+    const formValue = form.value;
+    const newProject = new Project(
       formValue.name, 
       formValue.phone,
       formValue.email,
@@ -27,6 +27,7 @@ export class NewProjectComponent implements OnInit {
       formValue.support,
       formValue.additional
       );
+    this.projectService.addProject(newProject);
   }
 
   

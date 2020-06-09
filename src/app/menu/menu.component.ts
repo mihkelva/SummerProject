@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ResolveEnd } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  isOnNewProject: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router ) { }
 
   ngOnInit(): void {
+      this.router.events.subscribe((routerData) => {
+        if(routerData instanceof ResolveEnd){ 
+           if(routerData.url === '/new'){
+              this.isOnNewProject=true;
+           }
+      } 
+    })
   }
+
+  
 
   scroll(el: HTMLElement) {
     console.log(el);

@@ -1,5 +1,6 @@
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -8,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
 
   onLogin(loginForm: NgForm) {
     console.log(loginForm.value)
+    this.router.navigate(["projects"], { relativeTo: this.route })
   }
 
 }
