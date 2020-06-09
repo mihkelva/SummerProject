@@ -1,4 +1,4 @@
-import { Project } from './../project.model';
+import { Project } from './../new-project/project.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProjectService } from '../project.service';

@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,10 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onLogin(loginForm: NgForm) {
+    console.log(loginForm.value)
   }
 
 }

@@ -3,7 +3,9 @@
 
 <p>Küsimused...</p>
 <p class="contact">Kontakteeru...</p>
-<form (ngSubmit)="onSubmitForm()">
+<form 
+    (ngSubmit)="onSubmitForm(contactForm)" 
+    #contactForm="ngForm">
     <div class="form-group">
         <label>Nimi: <span class="requiredRed">*</span></label>
         <input
@@ -15,34 +17,41 @@
     </div>
     <div class="form-group">
         <label>Email address: <span class="requiredRed">*</span></label>
-        <input 
+        <input
+            ngModel 
             type="email" 
             class="form-control" 
-            id="email">    
+            id="email"
+            name="email">    
     </div>
     <div class="form-group">
         <label>Telefoninumber: </label>
-        <input 
+        <input
+            ngModel 
             type="tel" 
             class="form-control" 
-            id="email">    
+            id="phone"
+            name="phone">    
     </div>
     <div class="form-group">
         <label>Teema: <span class="requiredRed">*</span></label>
-        <input 
+        <input
+            ngModel 
             type="subject" 
             class="form-control" 
-            id="subject">    
+            id="subject"
+            name="subject">    
     </div>
     <div class="form-group">
         <label>Kiri: <span class="requiredRed">*</span></label>
-        <textarea 
+        <textarea
+            ngModel 
             type="message" 
             class="form-control" 
-            id="message"></textarea>    
+            id="message"
+            name="message"></textarea>    
     </div>
     <button 
-            type="button" 
             [disabled]="false" 
             class="btn btn-dti mt-3">SAADA</button>
 </form>
