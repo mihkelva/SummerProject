@@ -1,0 +1,57 @@
+.row {
+  display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.list-group-item {
+  margin-left: 10%;
+  width: 30%;
+  margin-top: 20px;
+  display: inline-block;
+  flex-grow: 1;
+  width: calc(100% * (1/3) - 10px)
+}
+
+.list-group-item-date {
+  font-style: italic;
+}
+
+.notActive {
+  border: solid 2px red;
+}
+
+.isActive {
+  border: solid 2px green;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  font-weight: 400;
+}
+
+.btn-dti {
+  font-size: 1rem !important;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  width: 30%;
+}
+
+.form-control {
+  width: calc(100% * (2/3) - 10px)
+}
+
+.extraQuestion {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+}

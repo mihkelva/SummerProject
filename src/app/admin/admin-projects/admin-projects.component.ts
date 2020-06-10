@@ -9,6 +9,7 @@ import { ProjectService } from 'src/app/project.service';
 })
 export class AdminProjectsComponent implements OnInit {
   projects: Project[] = [];
+  questionNeeded = false;
 
   constructor(private projectService: ProjectService) { }
 
@@ -17,5 +18,11 @@ export class AdminProjectsComponent implements OnInit {
     console.log(this.projects);
   }
 
-  
+  onAddQuestion() {
+    console.log("hi");
+  }
+
+  onQuestionNeeded() {
+    this.questionNeeded = !this.questionNeeded;
+  }
 }

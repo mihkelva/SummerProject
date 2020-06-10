@@ -63,7 +63,8 @@ textarea.ng-invalid.ng-touched  {
 
 .header {
   font-size: 3rem;
-  margin-left: 40%;
+  margin: auto;
+  width: 20%;
   font-weight: 700;
 }
 
