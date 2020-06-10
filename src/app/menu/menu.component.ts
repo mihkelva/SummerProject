@@ -16,6 +16,8 @@ export class MenuComponent implements OnInit {
         if(routerData instanceof ResolveEnd){ 
            if(routerData.url === '/new'){
               this.isOnNewProject=true;
+           } else {
+              this.isOnNewProject=false;
            }
       } 
     })

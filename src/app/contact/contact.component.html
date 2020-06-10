@@ -13,7 +13,8 @@
             type="text" 
             class="form-control" 
             id="name"
-            name="name">    
+            name="name"
+            required>    
     </div>
     <div class="form-group">
         <label>Email address: <span class="requiredRed">*</span></label>
@@ -22,7 +23,8 @@
             type="email" 
             class="form-control" 
             id="email"
-            name="email">    
+            name="email"
+            required>    
     </div>
     <div class="form-group">
         <label>Telefoninumber: </label>
@@ -40,7 +42,8 @@
             type="subject" 
             class="form-control" 
             id="subject"
-            name="subject">    
+            name="subject"
+            required>    
     </div>
     <div class="form-group">
         <label>Kiri: <span class="requiredRed">*</span></label>
@@ -49,10 +52,12 @@
             type="message" 
             class="form-control" 
             id="message"
-            name="message"></textarea>    
+            name="message"
+            required></textarea>    
     </div>
     <button 
-            [disabled]="false" 
-            class="btn btn-dti mt-3">SAADA</button>
+            [disabled]="!contactForm.valid" 
+            class="btn btn-dti">SAADA</button>
 </form>
 <br>
+<app-footer></app-footer>
