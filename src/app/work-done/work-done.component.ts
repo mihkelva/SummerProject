@@ -19,58 +19,102 @@ export class WorkDoneComponent implements OnInit {
     new Image(
       0,
       {
-        img: 'https://www.upload.ee/image/11850145/tark_maja_pic.png',
-        description: 'Tark-maja'
+        img: '../../assets/tark_maja_pic.png',
+        // description: 'Tark-maja',
+        // title: 'Tark-maja',
+        alt: 'Tark-maja',
+        ariaLabel: 'Tark-maja projekti pilt' 
       },
-      { img: 'https://www.upload.ee/thumb/11850145/tark_maja_pic.png',
-      title: 'First image title',
-      alt: 'First image alt',
-      ariaLabel: 'First image aria-label' }
+      { 
+        img: '../../assets/tark_maja_pic.png',
+        // description: 'Tark-maja',
+        // title: 'Tark-maja',
+        alt: 'Tark-maja pisipilt',
+        ariaLabel: 'Tark-maja projekti pisipilt' 
+      }
     ),
     new Image(
       1, 
       { 
-        img: 'https://www.upload.ee/image/11850213/game_design_img.gif',
-        description:'Mängudisaini projekt'
+        img: '../../assets/game_design_img.gif',
+        // description:'Mängudisaini projekt',
+        // title: 'Mängudisaini projekt',
+        alt: 'Mängudisaini projekt',
+        ariaLabel: 'Mängudisaini projekti pilt' 
       }, 
-      { img: 'https://www.upload.ee/thumb/11850213/game_design_img.gif' }),
+      {
+        img: '../../assets/game_design_img.gif',
+        // description: 'Mängudisaini projekt',
+        // title: 'Mängudisaini projekt',
+        alt: 'Mängudisaini projekt',
+        ariaLabel: 'Tark-maja projekti pisipilt' 
+      }
+    ),
     new Image(
       2,
       {
-        img: 'https://www.upload.ee/image/11850257/tantsumeka_pic.png',
-        description: 'Tantsumeka veebileht',
-        title: 'Third image title',
-        alt: 'Third image alt',
-        ariaLabel: 'Third image aria-label'
+        img: '../../assets/tantsumeka_pic.png',
+        // description: 'Tantsumeka veebileht',
+        // title: 'Tantsumeka veebileht',
+        alt: 'Tantsumeka veebileht',
+        ariaLabel: 'Tantsumeka veebilehe pilt'
       },
       {
-        img: 'https://www.upload.ee/thumb/11850257/tantsumeka_pic.png',
-        description: 'Tantsumeka veebileht'
+        img: '../../assets/tantsumeka_pic.png',
+        // description: 'Tantsumeka veebileht',
+        // title: 'Tantsumeka veebileht',
+        alt: 'Tantsumeka veebileht',
+        ariaLabel: 'Tantsumeka veebilehe pisipilt' 
       }
     ),
     new Image(
       3,
       {
-        img: 'https://www.upload.ee/image/11850297/Stressikaart_pic.jpg',
-        description: 'Stressikaart',
-        title: 'Fourth image title (modal obj)',
-        alt: 'Fourth image alt (modal obj)',
-        ariaLabel: 'Fourth image aria-label (modal obj)'
+        img: '../../assets/Stressikaart_pic.jpg',
+        // description: 'Stressikaart',
+        // title: 'Stressikaart',
+        alt: 'Stressikaart',
+        ariaLabel: 'Stressikaardi projekti pilt'
       },
       { 
-        img: 'https://www.upload.ee/thumb/11850297/Stressikaart_pic.jpg',
-        title: 'Stressikaart',
-        alt: 'Fourth image alt (plain obj)',
-        ariaLabel: 'Fourth image aria-label (plain obj)' }
+        img: '../../assets/Stressikaart_pic.jpg',
+        // description: 'Stressikaart',
+        // title: 'Stressikaart',
+        alt: 'Stressikaart',
+        ariaLabel: 'Stressikaardi projekti pisipilt' }
     ),
     new Image(
       4,
       {
-        img: 'https://www.upload.ee/image/11850328/Quizify.jpg',
-        description: 'Quizify', 
+        img: '../../assets/Quizify.jpg',
+        // description: 'Quizify',
+        // title: 'Quizify',
+        alt: 'Quizify',
+        ariaLabel: 'Quizify projekti pilt' 
       }, 
       { 
-        img: 'https://www.upload.ee/thumb/11850328/Quizify.jpg' 
+        img: '../../assets/Quizify.jpg',
+        // description: 'Quizify',
+        // title: 'Quizify',
+        alt: 'Quizify',
+        ariaLabel: 'Quizify projekti pisipilt' 
+      }
+    ),
+    new Image(
+      5, 
+      { 
+        img: '../../assets/Hasartmängusõltuvus.png',
+        // description:'Mängudisaini projekt',
+        // title: 'Mängudisaini projekt',
+        alt: 'Mängudisaini projekt',
+        ariaLabel: 'Mängudisaini projekti pilt' 
+      }, 
+      {
+        img: '../../assets/Hasartmängusõltuvus.png',
+        // description: 'Mängudisaini projekt',
+        // title: 'Mängudisaini projekt',
+        alt: 'Mängudisaini projekt',
+        ariaLabel: 'Tark-maja projekti pisipilt' 
       }
     ),
     

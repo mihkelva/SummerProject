@@ -107,3 +107,14 @@
     margin-top: 40px;
   }
   
+  .arrow-image {
+    color: blue !important;
+    background-color: black !important;
+    border: solid 1px black;
+  }
+
+  ::ng-deep .arrow-image {
+    color: blue !important;
+    background-color: black !important;
+    border: solid 1px black;
+  }
