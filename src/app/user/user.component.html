@@ -1,0 +1,25 @@
+<p>Logi siit sisse: </p>
+
+<form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+    <div class="form-group half">
+        <label>Kasutajanimi:</label>
+        <input
+            ngModel 
+            name="username"
+            type="text" 
+            class="form-control half" 
+            id="username">    
+    </div>
+    <div class="form-group half">
+        <label>Parool:</label>
+        <input 
+            ngModel 
+            name="password"
+            type="password" 
+            class="form-control half" 
+            id="password">    
+    </div>
+    <button 
+            [disabled]="false" 
+            class="btn btn-dti mt-3">LOGI SISSE</button>
+</form>
