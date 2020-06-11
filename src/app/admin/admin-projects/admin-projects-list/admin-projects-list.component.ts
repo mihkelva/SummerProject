@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from './../../../new-project/project.model';
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/project.service';
@@ -14,19 +14,19 @@ export class AdminProjectsListComponent implements OnInit {
 
   constructor(
     private projectService: ProjectService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
-    console.log(this.projects);
   }
 
   onAddQuestion() {
     console.log("hi");
   }
 
-  onQuestionNeeded() {
+  onQuestionNeeded(i: number) {
     this.questionNeeded = !this.questionNeeded;
   }
 
@@ -34,7 +34,7 @@ export class AdminProjectsListComponent implements OnInit {
     console.log("project info appears");
   }
 
-  onChangeProject() {
-    console.log("change project appears")
+  onChangeProject(project) {
+   
   }
 }
