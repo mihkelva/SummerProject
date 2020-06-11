@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ----------------------------------------------------------------------------------------------------------------
-Veebileht tarkvaraprojektide toetuseks juhend
+## Veebileht tarkvaraprojektide toetuseks juhend
 
 ### Karusell-galerii
 Requires:
@@ -25,7 +25,6 @@ npm install --save hammerjs mousetrap @angular/cdk
 npm install --save-dev @types/mousetrap @types/hammerjs
 npm i angular-modal-gallery
 ``````
- 
 ### FAQ
 Requires:
 `````
