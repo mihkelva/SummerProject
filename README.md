@@ -41,6 +41,11 @@ ng add @angular/material
 npm i -s material-design-icons
 npm install -s @angular-material-extensions/faq
 `````
+### MENU
+Requires:
+`````
+npm install @nicky-lenaers/ngx-scroll-to
+`````
 
 Update the imports in node_modules/@angular-material-extensions/faq/esm2015/faq.js
 ``````
