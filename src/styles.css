@@ -1,80 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("import-style.css");
-
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
-
 * {
-  font-family: "Baloo Tammudu 2";
+    font-family: "Baloo Tammudu 2";
 }
 
 .btn-dti {
-  color: #ffffff !important;
-  background-color: #75b6ab !important;
-  border-color: #6bcaba !important; 
-  font-size: 2rem !important;
-  display: block !important;
-  margin: auto !important;
-  padding-top: 12px !important;
+    color: #ffffff !important;
+    background-color: #75b6ab !important;
+    border-color: #6bcaba !important;
+    font-size: 2rem !important;
+    display: block !important;
+    margin: auto !important;
+    padding-top: 12px !important;
 }
 
-.btn-dti:hover, .btn-dti:focus, .btn-dti:active, .btn-dti:active, .open > .dropdown-toggle.btn-dti {
-  color: #fff !important;
-  background-color: #36ccb2 !important;
-  border-color: #ffffff !important; 
-  outline: none !important;
+.btn-dti:hover,
+.btn-dti:focus,
+.btn-dti:active,
+.btn-dti:active,
+.open>.dropdown-toggle.btn-dti {
+    color: #fff !important;
+    background-color: #36ccb2 !important;
+    border-color: #ffffff !important;
+    outline: none !important;
 }
 
 .btn-dti:disabled {
-  color: #ffffff !important;
-  background-color: #b1ddd6 !important;
-  border-color: #b1ddd6 !important; 
+    color: #ffffff !important;
+    background-color: #b1ddd6 !important;
+    border-color: #b1ddd6 !important;
 }
 
 .middleHeader {
-  font-size: 3vw;
-  margin-top: 15vw;
+    font-size: 3vw;
+    margin-top: 15vw;
+    text-align: center;
 }
 
 .requiredRed {
-  color: red;
+    color: red;
 }
 
 .contact {
-  margin-bottom: 10vw;
+    margin-bottom: 10vw;
+    text-align: center;
 }
 
 form {
-  margin-left: 25%;
-  margin-right:50%;
-  width: 25%;
-  display: block;
-  margin: auto;
+    margin-left: 25%;
+    margin-right: 50%;
+    width: 25%;
+    display: block;
+    margin: auto;
 }
 
 input.ng-invalid.ng-touched,
-textarea.ng-invalid.ng-touched  {
-  border: solid 1px red;
+textarea.ng-invalid.ng-touched {
+    border: solid 1px red;
 }
 
 .form-control {
-  box-shadow: 10px 10px 30px 0 rgba(126, 127, 128, 0.16) !important; 
+    box-shadow: 10px 10px 30px 0 rgba(126, 127, 128, 0.16) !important;
 }
 
 .header {
-  font-size: 3rem;
-  margin: auto;
-  width: 20%;
-  font-weight: 700;
+    font-size: 3rem;
+    margin: auto;
+    width: 20%;
+    font-weight: 1000;
 }
 
 .hero {
-  height: 400px;
-  margin: 0 5px;
-  background: url("assets/hero-image.png");
-  background-size: cover;
-  background-position: 0 20%;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
+    height: 400px;
+    margin: 0 5px;
+    background: url("assets/hero-image.png");
+    background-size: cover;
+    background-position: 0 20%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.mat-divider {
+    display: block;
+    margin: 0;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.mat-divider {
+    border-top-color: rgba(0, 0, 0, .12);
+}
+
+.rectangle {
+    height: 5px;
+    width: 100px;
+    background-color: #6BCABA;
+    margin-left: auto;
+    margin-right: auto;
 }

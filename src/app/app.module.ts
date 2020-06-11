@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import {MatDividerModule} from '@angular/material/divider';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
