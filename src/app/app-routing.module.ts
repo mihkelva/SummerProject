@@ -15,10 +15,8 @@ const appRoutes: Routes = [
     {path: 'user', component: UserComponent},
     {path: 'user/projects', component: UserProjectsComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'admin/projects', component: AdminProjectsComponent, children: [
-        {path: '', component: AdminProjectsListComponent},
-        {path: ':id', component: AdminProjectsDetailComponent}
-    ]}
+    {path: 'admin/projects', component: AdminProjectsListComponent },
+    {path: 'admin/projects/:id', component: AdminProjectsDetailComponent }
 ];
 
 @NgModule({

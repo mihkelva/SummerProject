@@ -1,11 +1,14 @@
 import { Project } from './new-project/project.model';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class ProjectService {
-
+    projectsChanged = new Subject<Project[]>();
+   
     private projects: Project[] = [
         new Project(
+            1,
             "Martin",
             "5512345",
             "m@m.com",
@@ -15,6 +18,7 @@ export class ProjectService {
             "Pole midagi lisada"
         ),
         new Project(
+            2,
             "Tõnis Saluste",
             "5512345",
             "tõnis.saluste@gmail.com",
@@ -24,6 +28,7 @@ export class ProjectService {
             "Tahan teada, mitu päeva selle teostamiseks läheb."
         ),
         new Project(
+            3,
             "Pets",
             "5512345",
             "suvapets@gmail.com",
@@ -33,6 +38,7 @@ export class ProjectService {
             "Njetu."
         ),
         new Project(
+            4,
             "Sirle Lill",
             "5512345",
             "sirts@gmail.com",
@@ -42,6 +48,7 @@ export class ProjectService {
             "-."
         ),
         new Project(
+            5,
             "Kopter, Heli",
             "5512345",
             "boeing@gmail.com",
@@ -53,17 +60,25 @@ export class ProjectService {
     ];
 
     addProject(newProject: Project) {
-        console.log(this.projects);
-        console.log(newProject);
         this.projects.push(newProject);
-        console.log(this.projects)
+        this.projectsChanged.next(this.projects.slice());
     }
     
     setProjects(projects: Project[]) {
         this.projects = projects;
+        this.projectsChanged.next(this.projects.slice());
     }
 
     getProjects() {
         return this.projects.slice();
     }
+
+    getProject(index: number) {
+        return this.projects[index];
+    }
+
+    updateProject(index: number, updatedProject: Project) {
+        this.projects[index] = updatedProject;
+        this.projectsChanged.next(this.projects.slice());
+      }
 }

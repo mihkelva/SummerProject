@@ -2,7 +2,7 @@
 <br>
 <div class="row">
     <div class="col-xs-12">
-        <ng-container *ngFor="let project of projects" >
+        <ng-container *ngFor="let project of projects; let i = index" >
             <div 
                 class="list-group-item clearfix" 
                 [ngClass]="[project.visible ? 'isActive' : 'notActive']"
@@ -37,14 +37,17 @@
                             Lisainformatsioon: {{ project.support }}
                         </div>
                         <div class="list-group-item-contact">
-                            Projekti esitas: {{ project.recipient_name }}
-                            (telefoninumber: {{ project.recipient_phone }},
-                            e-mail: {{ project.recipient_email }})
+                            Projekti esitas: {{ project.contactName }}
+                            (telefoninumber: {{ project.contactPhone }},
+                            e-mail: {{ project.contactEmail }})
                         </div>
                     </label>
                     <div class="buttons" *ngIf="!project.visible; else projectVisible">
-                        <button class="btn btn-dti" (click)="onQuestionNeeded()">Pane kirja kommentaar</button>
-                        <button class="btn btn-dti" (click)="onChangeProject()">Muuda projekti (ka andmebaasis!)</button>
+                        <button class="btn btn-dti" (click)="onQuestionNeeded(i)">Pane kirja kommentaar</button>
+                        <button 
+                            class="btn btn-dti" 
+                            (click)="onChangeProject(project)" 
+                            [routerLink]="[project.id]">Muuda projekti (ka andmebaasis!)</button>
                     </div>
                     <ng-template #projectVisible>
                         <button class="btn btn-dti" (click)="onProjectInfo()">Vaata projekti seisu</button></ng-template >
@@ -60,3 +63,4 @@
         </ng-container>
     </div>
 </div>
+<router-outlet></router-outlet>
