@@ -6,7 +6,11 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
+<<<<<<< HEAD
 import { MatFaqModule } from '@angular-material-extensions/faq';
+=======
+import {MatDividerModule} from '@angular/material/divider';
+>>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -35,8 +39,13 @@ import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.co
 import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaqComponent } from './faq/faq.component';
+=======
+import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
+import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
+>>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
 
 @NgModule({
   declarations: [
@@ -53,7 +62,12 @@ import { FaqComponent } from './faq/faq.component';
     FooterComponent,
     UserComponent,
     UserProjectsComponent,
+<<<<<<< HEAD
     FaqComponent
+=======
+    AdminProjectsListComponent,
+    AdminProjectsDetailComponent,
+>>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
   ],
   imports: [
     GalleryModule.forRoot(),

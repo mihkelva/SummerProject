@@ -6,6 +6,9 @@ export class Project {
     public description: string;
     public additional: string;
     public support: string;
+    public deleted: boolean;
+    public visible: boolean;
+    public questions: string[];
 
     constructor(
         recipient_name: string, 
@@ -22,5 +25,8 @@ export class Project {
             this.description = description;
             this.additional = additional;
             this.support = support;
+            this.deleted = false;
+            this.visible = false;
+            this.questions = [];
     }
 }

@@ -1,76 +1,35 @@
 <div class="header">Esita meile uus projekt!</div>
+<div class="rectangle"></div>
 <br><br>
 
 <form (ngSubmit)="onAddNewProject(newProjectForm)" #newProjectForm="ngForm">
     <div class="form-group half">
         <label>Nimi: <span class="requiredRed">*</span></label>
-        <input
-            ngModel 
-            name="name"
-            type="text" 
-            class="form-control half" 
-            id="name"
-            required>    
+        <input ngModel name="name" type="text" class="form-control half" id="name" required>
     </div>
     <div class="form-group half">
         <label>Email address: <span class="requiredRed">*</span></label>
-        <input 
-            ngModel 
-            name="email"
-            type="email" 
-            class="form-control" 
-            id="email"
-            required>    
+        <input ngModel name="email" type="email" class="form-control" id="email" required>
     </div>
     <div class="form-group half">
         <label>Telefoninumber:</label>
-        <input 
-            ngModel 
-            name="phone"
-            type="tel" 
-            class="form-control half" 
-            id="phone">    
+        <input ngModel name="phone" type="tel" class="form-control half" id="phone">
     </div>
     <div class="form-group half">
         <label>Projekti nimi: <span class="requiredRed">*</span></label>
-        <input 
-            ngModel 
-            name="project_name"
-            type="text" 
-            class="form-control" 
-            id="project_name"
-            required>    
+        <input ngModel name="project_name" type="text" class="form-control" id="project_name" required>
     </div>
     <div class="form-group">
         <label>Projekti lühikirjeldus: <span class="requiredRed">*</span></label>
-        <textarea 
-            ngModel 
-            name="description"
-            type="text" 
-            class="form-control" 
-            id="description"
-            required></textarea>
+        <textarea ngModel name="description" type="text" class="form-control" id="description" required></textarea>
     </div>
     <div class="form-group">
         <label>Kuidas saan toetada tudengit:</label>
-        <textarea 
-            ngModel 
-            name="support"
-            type="text" 
-            class="form-control" 
-            id="support"></textarea>    
+        <textarea ngModel name="support" type="text" class="form-control" id="support"></textarea>
     </div>
     <div class="form-group">
         <label>Kas soovid veel midagi lisada?</label>
-        <textarea 
-            ngModel 
-            name="additional"
-            type="text" 
-            class="form-control" 
-            id="additional"></textarea>    
+        <textarea ngModel name="additional" type="text" class="form-control" id="additional"></textarea>
     </div>
-    <button 
-            [disabled]="!newProjectForm.valid" 
-            class="btn btn-dti mt-3"
-        >SAADA</button>
+    <button [disabled]="!newProjectForm.valid" class="btn btn-dti mt-3">SAADA</button>
 </form>

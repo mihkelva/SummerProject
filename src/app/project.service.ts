@@ -13,6 +13,42 @@ export class ProjectService {
             "Lühikirjeldus",
             "Saan anda 5 euri",
             "Pole midagi lisada"
+        ),
+        new Project(
+            "Tõnis Saluste",
+            "5512345",
+            "tõnis.saluste@gmail.com",
+            "Projekti nimi on 'Kaks karu elavad metsas",
+            "Lühikirjeldus",
+            "Ei oska küsimusele kuidagi vastata",
+            "Tahan teada, mitu päeva selle teostamiseks läheb."
+        ),
+        new Project(
+            "Pets",
+            "5512345",
+            "suvapets@gmail.com",
+            "A mul suva",
+            "Lühikirjeldus",
+            "Mõttetu jama",
+            "Njetu."
+        ),
+        new Project(
+            "Sirle Lill",
+            "5512345",
+            "sirts@gmail.com",
+            "Lilleseadja",
+            "Lühikirjeldus",
+            "Kahjuks pole millegagi toetada",
+            "-."
+        ),
+        new Project(
+            "Kopter, Heli",
+            "5512345",
+            "boeing@gmail.com",
+            "SpaceX",
+            "Lühikirjeldus",
+            "Lend Marsile igaühele",
+            "Kas ülikool maksab?"
         )
     ];
 
