@@ -34,6 +34,8 @@ import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.co
 import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
+import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
+import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { UserProjectsComponent } from './user/user-projects/user-projects.compon
     AdminProjectsComponent,
     FooterComponent,
     UserComponent,
-    UserProjectsComponent
+    UserProjectsComponent,
+    AdminProjectsListComponent,
+    AdminProjectsDetailComponent,
   ],
   imports: [
     GalleryModule.forRoot(),

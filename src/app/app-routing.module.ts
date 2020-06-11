@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router'
 import { AdminComponent } from './admin/admin.component';
 import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
+import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
+import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent },
@@ -13,7 +15,10 @@ const appRoutes: Routes = [
     {path: 'user', component: UserComponent},
     {path: 'user/projects', component: UserProjectsComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'admin/projects', component: AdminProjectsComponent}
+    {path: 'admin/projects', component: AdminProjectsComponent, children: [
+        {path: '', component: AdminProjectsListComponent},
+        {path: ':id', component: AdminProjectsDetailComponent}
+    ]}
 ];
 
 @NgModule({
