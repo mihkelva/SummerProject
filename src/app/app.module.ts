@@ -40,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaqComponent } from './faq/faq.component';
 import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
 import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -63,13 +64,16 @@ import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-proje
   imports: [
     GalleryModule.forRoot(),
     MatFaqModule.forRoot(),
+    ScrollToModule.forRoot(),
     MatDividerModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFaqModule
+    
   ],
   providers: [ProjectService, DataStorageService, Location],
   bootstrap: [AppComponent]

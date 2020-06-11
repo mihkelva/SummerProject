@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-sm navbar-dark bg-dti">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dti">
     <a class="navbar-brand ml-2" href="#"><img src="assets/icon.png" height="30"></a>
     <button aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar-collapsible" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -7,23 +7,23 @@
         <div *ngIf="!isOnNewProject; else newProject">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                <a class="nav-link" routerLink="/">Kodu</a>
-            </li>
-                <li class="nav-item">
-                    <a class="nav-link">Tehtud tööd</a>
+                    <a class="nav-link" routerLink="/">Kodu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Meist</a>
+                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="500">Tehtud tööd</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Kontakt</a>
+                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1200">Meist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1600">Kontakt</a>
                 </li>
             </ul>
         </div>
         <ng-template #newProject>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/../"> Tagasi pealehele</a>
+                    <a class="nav-link" routerLink="/../">Tagasi pealehele </a>
                 </li>
             </ul>
         </ng-template>
@@ -33,4 +33,5 @@
             </li>
         </ul>
     </div>
+
 </nav>
