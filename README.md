@@ -6,22 +6,41 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+----------------------------------------------------------------------------------------------------------------
+Veebileht tarkvaraprojektide toetuseks juhend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Karusell-galerii
+Requires:
+Angular (version 5 or higher)
+rxjs-compat if using Angular >=6
+rxjs 5.0.0 or higher
 
-## Build
+npm install rxjs
+npm install rxjs-compat
+npm install --save @ks89/angular-modal-gallery
+npm install --save hammerjs mousetrap @angular/cdk
+npm install --save-dev @types/mousetrap @types/hammerjs
+npm i angular-modal-gallery
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+ 
+FAQ
+Requires:
+•	angular flex-layout v7.x
+•	angular material v7.x
+•	angular cdk v7.x
+•	angular animations v7.x
+•	angular forms v7.x
 
-## Running unit tests
+npm i @angular/cdk @angular/material @angular/flex-layout @angular/animations @angular/forms
+npm i -s material-design-icons
+ng add @angular/material
+npm i -s material-design-icons
+npm install -s @angular-material-extensions/faq
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Update the imports in node_modules/@angular-material-extensions/faq/esm2015/faq.js
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
