@@ -18,8 +18,8 @@ rxjs 5.0.0 or higher
 ```
 
 ``````
-npm install rxjs
 npm install rxjs-compat
+npm install rxjs
 npm install --save @ks89/angular-modal-gallery
 npm install --save hammerjs mousetrap @angular/cdk
 npm install --save-dev @types/mousetrap @types/hammerjs
