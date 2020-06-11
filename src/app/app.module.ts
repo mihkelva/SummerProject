@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MatFaqModule } from '@angular-material-extensions/faq';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -34,6 +35,8 @@ import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.co
 import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -49,15 +52,18 @@ import { UserProjectsComponent } from './user/user-projects/user-projects.compon
     AdminProjectsComponent,
     FooterComponent,
     UserComponent,
-    UserProjectsComponent
+    UserProjectsComponent,
+    FaqComponent
   ],
   imports: [
     GalleryModule.forRoot(),
+    MatFaqModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   providers: [ProjectService, DataStorageService, Location],
   bootstrap: [AppComponent]
