@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ViewEncapsulation} from '@angular/core';
 import { AccessibilityConfig, Image, ImageEvent } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-work-done',
   templateUrl: './work-done.component.html',
-  styleUrls: ['./work-done.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./work-done.component.css']
 })
 export class WorkDoneComponent implements OnInit {
 

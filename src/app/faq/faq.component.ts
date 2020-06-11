@@ -8,11 +8,6 @@ import {FaqItem} from '@angular-material-extensions/faq';
 })
 export class FaqComponent implements OnInit {
 
-<<<<<<< HEAD
-=======
-  
-
->>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
   constructor() { }
 
   ngOnInit(): void {
@@ -30,20 +25,11 @@ export class FaqComponent implements OnInit {
   ];
 
   faq: FaqItem[] = [];
-<<<<<<< HEAD
 
   onNewFaqItem(faqItem: FaqItem) {
     console.log('on new faqItem -> ', faqItem);
     this.faq.splice(0, 0, faqItem);
     this.list.push(faqItem);
   }
-=======
-  
-  onNewFaqItem(faqItem: FaqItem) {
-      console.log('on new faqItem -> ', faqItem);
-      this.faq.splice(0, 0, faqItem);
-    }
-  
->>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
 
 }

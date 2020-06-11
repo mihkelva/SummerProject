@@ -73,7 +73,6 @@ textarea.ng-invalid.ng-touched {
 }
 
 .hero {
-<<<<<<< HEAD
   height: 400px;
   margin: 0 5px;
   background: url("assets/hero-image.png");
@@ -82,18 +81,6 @@ textarea.ng-invalid.ng-touched {
   display: flex;
   align-items: center;
   border-radius: 10px;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-=======
-    height: 400px;
-    margin: 0 5px;
-    background: url("assets/hero-image.png");
-    background-size: cover;
-    background-position: 0 20%;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
 }
 
 .mat-divider {
@@ -114,4 +101,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: auto;
     margin-right: auto;
 }
->>>>>>> 447b0458f0db272955f181d9a68948d1e4825130
