@@ -17,3 +17,17 @@
   font-family: Roboto, "Helvetica Neue", sans-serif !important;
   letter-spacing: normal !important;
 }
+
+.main-content {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+::ng-deep .mat-toolbar.mat-primary {
+  background: #6bcaba !important;
+}
+
+::ng-deep .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #6bcaba !important;
+  text-decoration-color: #6bcaba !important;
+}

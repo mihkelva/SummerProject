@@ -38,10 +38,3 @@
     grid-column: 3/4;
     grid-row: 1;
 }
-
-::ng-deep p {
-    /* margin-top: 0 !important;
-    margin-bottom: 1rem !important; */
-    /* padding-left: 0 !important;
-    padding-right: 0 !important; */
-}
