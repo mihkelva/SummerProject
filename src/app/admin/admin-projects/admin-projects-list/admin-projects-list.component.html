@@ -9,13 +9,12 @@
                 *ngIf="!project.deleted">
                 <div>
                     <label>
-                        <!-- <div *ngIf="project.visible && project.name"> -->
                         <input
                             [(ngModel)]="project.visible"
                             type="checkbox">
                         <div class="list-group-item-header">
                             <div class="list-group-item-date">
-                            Esitatud: 12.06.2020
+                                Esitatud: 12.06.2020
                             </div>
                             <button
                                 *ngIf="!project.visible"
@@ -50,7 +49,8 @@
                             [routerLink]="['edit',project.id]">Muuda projekti (ka andmebaasis!)</button>
                     </div>
                     <ng-template #projectVisible>
-                        <button class="btn btn-dti" (click)="onProjectInfo()">Vaata projekti seisu</button></ng-template >
+                        <button class="btn btn-dti" (click)="onProjectInfo()">Vaata projekti seisu</button>
+                    </ng-template >
                     <div *ngFor="let question of project.questions" class="extraQuestion">
                         {{ question }} <button>X</button>
                     </div>

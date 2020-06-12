@@ -12,7 +12,7 @@ import { FaqAddComponent } from './admin/faq-add/faq-add.component';
 import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
 
 const appRoutes: Routes = [
-    {path: '', component: HomeComponent },
+    {path: 'home', component: HomeComponent },
     {path: 'new', component: NewProjectComponent},
     {path: 'user', component: UserComponent},
     {path: 'user/projects', component: UserProjectsComponent},
@@ -23,6 +23,9 @@ const appRoutes: Routes = [
     {path: 'admin/projects/view/:id', component: AdminProjectsDetailComponent },
     {path: 'admin/faq', component: FaqAddComponent },
     {path: 'admin/previous', component: PreviousProjectsComponent },
+    {path: '**', redirectTo: '/home' },
+    {path: '', redirectTo: '/home',
+    pathMatch: 'full' },
 ];
 
 @NgModule({
