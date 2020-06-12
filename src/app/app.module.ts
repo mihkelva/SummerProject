@@ -37,7 +37,6 @@ import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FaqComponent } from './faq/faq.component';
 import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
 import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
 import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
@@ -58,7 +57,6 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     FooterComponent,
     UserComponent,
     UserProjectsComponent,
-    FaqComponent,
     AdminProjectsListComponent,
     AdminProjectsDetailComponent,
     AdminProjectsViewComponent,
