@@ -113,6 +113,12 @@
     border: solid 1px black;
   }
 
+  .gallery {
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 5px 5px 20px rgb(236, 236, 236)  ;
+  }
+
   ::ng-deep .arrow-image {
     color: blue !important;
     background-color: black !important;
