@@ -1,6 +1,8 @@
+import { FaqService } from './../faq.service';
 import { Contact } from './contact.model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FaqItem } from '@angular-material-extensions/faq';
 
 @Component({
   selector: 'app-contact',
@@ -8,9 +10,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  constructor() { }
+  list: FaqItem[] = [];
+  constructor(private faqService: FaqService) { }
 
   ngOnInit(): void {
+    this.list = this.faqService.getFaqItems();
   }
 
   onSubmitForm(form: NgForm) {
@@ -23,5 +27,4 @@ export class ContactComponent implements OnInit {
       formValue.subject, 
       formValue.message)
   }
-
 }

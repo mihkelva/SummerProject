@@ -7,17 +7,34 @@ import { Router, ResolveEnd } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  isOnNewProject: boolean = false;
+  isHomeMenu: boolean = false;
+  isBackMenu: boolean = false;
+  isAdminMenu: boolean = false;
 
   constructor(private router: Router ) { }
 
   ngOnInit(): void {
       this.router.events.subscribe((routerData) => {
         if(routerData instanceof ResolveEnd){ 
-           if(routerData.url === '/new'){
-              this.isOnNewProject=true;
+           if(routerData.url === '/new' || 
+              routerData.url === '/admin' || 
+              routerData.url === '/user' ){
+              this.isBackMenu=true;
            } else {
-              this.isOnNewProject=false;
+            this.isBackMenu=false;
+           }
+           if(routerData.url === '/'){
+            this.isHomeMenu=true;
+           } else {
+            this.isHomeMenu=false;
+           }
+           if(routerData.url === '/admin/projects' ||
+              routerData.url === '/admin/faq' ||
+              routerData.url === '/admin/projects/new' ||
+              routerData.url === '/admin/previous'){
+            this.isAdminMenu=true;
+           } else {
+            this.isAdminMenu=false;
            }
       } 
     })
