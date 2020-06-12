@@ -7,7 +7,7 @@ import { Router, ResolveEnd } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  isHomeMenu: boolean = false;
+  isHomeMenu: boolean = true;
   isBackMenu: boolean = false;
   isAdminMenu: boolean = false;
 
@@ -23,7 +23,8 @@ export class MenuComponent implements OnInit {
            } else {
             this.isBackMenu=false;
            }
-           if(routerData.url === '/'){
+           if(routerData.url === '/home' ||
+              routerData.url === '/'){
             this.isHomeMenu=true;
            } else {
             this.isHomeMenu=false;
