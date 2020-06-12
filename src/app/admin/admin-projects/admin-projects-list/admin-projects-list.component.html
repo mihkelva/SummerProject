@@ -47,7 +47,7 @@
                         <button 
                             class="btn btn-dti" 
                             (click)="onChangeProject(project)" 
-                            [routerLink]="[project.id]">Muuda projekti (ka andmebaasis!)</button>
+                            [routerLink]="['edit',project.id]">Muuda projekti (ka andmebaasis!)</button>
                     </div>
                     <ng-template #projectVisible>
                         <button class="btn btn-dti" (click)="onProjectInfo()">Vaata projekti seisu</button></ng-template >

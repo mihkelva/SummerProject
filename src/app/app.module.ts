@@ -40,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaqComponent } from './faq/faq.component';
 import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
 import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
+import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-proje
     FaqComponent,
     AdminProjectsListComponent,
     AdminProjectsDetailComponent,
+    AdminProjectsViewComponent,
   ],
   imports: [
     GalleryModule.forRoot(),
