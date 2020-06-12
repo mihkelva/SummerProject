@@ -10,9 +10,9 @@ import { ProjectService } from 'src/app/project.service';
 })
 export class UserProjectsComponent implements OnInit {
   year = new Date().getFullYear();
+  selectedProject;
 
   projects: Project[] = [];
-  questionNeeded = false;
 
   constructor(
     private projectService: ProjectService,
@@ -21,22 +21,5 @@ export class UserProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
-    console.log(this.projects);
-  }
-
-  onAddQuestion() {
-    console.log("hi");
-  }
-
-  onQuestionNeeded() {
-    this.questionNeeded = !this.questionNeeded;
-  }
-
-  onProjectInfo() {
-    console.log("project info appears");
-  }
-
-  onChangeProject() {
-    console.log("change project appears")
   }
 }
