@@ -7,6 +7,9 @@ import { AdminComponent } from './admin/admin.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
 import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
 import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
+import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-new/admin-projects-new.component';
+import { FaqAddComponent } from './admin/faq-add/faq-add.component';
+import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent },
@@ -15,8 +18,11 @@ const appRoutes: Routes = [
     {path: 'user/projects', component: UserProjectsComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'admin/projects', component: AdminProjectsListComponent },
+    {path: 'admin/projects/new', component: AdminProjectsNewComponent },
     {path: 'admin/projects/edit/:id', component: AdminProjectsDetailComponent },
-    {path: 'admin/projects/view/:id', component: AdminProjectsDetailComponent }
+    {path: 'admin/projects/view/:id', component: AdminProjectsDetailComponent },
+    {path: 'admin/faq', component: FaqAddComponent },
+    {path: 'admin/previous', component: PreviousProjectsComponent },
 ];
 
 @NgModule({

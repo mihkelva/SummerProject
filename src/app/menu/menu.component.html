@@ -4,7 +4,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbar-collapsible">
-        <div *ngIf="!isOnNewProject; else newProject">
+        <div *ngIf="isHomeMenu" class="homeMenu">
+            <div>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/">Kodu</a>
@@ -19,19 +20,38 @@
                     <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1600">Kontakt</a>
                 </li>
             </ul>
+            </div>
+            <div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="new">Esita projekt</a>
+                </li>
+            </ul>
+            </div>
         </div>
-        <ng-template #newProject>
+        <div *ngIf="isBackMenu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/../">Tagasi pealehele </a>
                 </li>
             </ul>
-        </ng-template>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="new">Esita projekt</a>
-            </li>
-        </ul>
+        </div>
+        <div *ngIf="isAdminMenu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/projects">Kõik projektid </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/projects/new">Lisa ise projekt </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/faq">Lisa KKK küsimus ja vastus </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/previous">Halda varasemate projektide vaadet </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </nav>

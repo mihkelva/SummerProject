@@ -255,3 +255,9 @@
       color: #fff; }
       .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
         color: #fff; }
+
+.homeMenu {
+  display: flex !important;
+  justify-content: space-between !important;
+  color: red !important;
+}

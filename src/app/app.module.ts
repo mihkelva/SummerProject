@@ -44,6 +44,7 @@ import { AdminProjectsViewComponent } from './admin/admin-projects/admin-project
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FaqAddComponent } from './admin/faq-add/faq-add.component';
 import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
+import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-new/admin-projects-new.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { PreviousProjectsComponent } from './admin/previous-projects/previous-pr
     AdminProjectsViewComponent,
     FaqAddComponent,
     PreviousProjectsComponent,
+    AdminProjectsNewComponent,
   ],
   imports: [
     GalleryModule.forRoot(),
