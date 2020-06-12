@@ -8,12 +8,10 @@ import { FaqItem } from '@angular-material-extensions/faq';
   styleUrls: ['./faq-add.component.css']
 })
 export class FaqAddComponent implements OnInit {
-  list: FaqItem[] = [];
 
   constructor(private faqService: FaqService) { }
 
   ngOnInit(): void {
-    this.list = this.faqService.getFaqItems();
   }
 
   onNewFaqItem(faqItem: FaqItem) {
