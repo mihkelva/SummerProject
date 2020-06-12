@@ -387,3 +387,7 @@
 .navbar-dark .navbar-text a:focus {
     color: #fff;
 }
+
+li {
+    border-right: 1px solid black;
+}

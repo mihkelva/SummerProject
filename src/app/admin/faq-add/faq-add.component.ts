@@ -18,5 +18,6 @@ export class FaqAddComponent implements OnInit {
 
   onNewFaqItem(faqItem: FaqItem) {
     this.faqService.newFaqItem(faqItem);
+    this.list = this.faqService.getFaqItems();
   }
 }

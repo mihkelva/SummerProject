@@ -30,17 +30,6 @@
   margin-bottom: 10px;
 }
 
-.notActive {
-  border: solid 2px red;
-}
-
-.isActive {
-  border: solid 2px green;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
 
 label {
   font-weight: 400;
@@ -67,4 +56,12 @@ label {
   margin-top: 10px;
   display: flex;
   justify-content: flex-start;
+}
+
+.selected {
+  border: 1.5px solid green;
+}
+
+input[type="radio"] {
+  display: none;
 }
