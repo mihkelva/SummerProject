@@ -1,4 +1,6 @@
+import { FaqService } from './../../faq.service';
 import { Component, OnInit } from '@angular/core';
+import { FaqItem } from '@angular-material-extensions/faq';
 
 @Component({
   selector: 'app-faq-add',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faq-add.component.css']
 })
 export class FaqAddComponent implements OnInit {
+  list: FaqItem[] = [];
 
-  constructor() { }
+  constructor(private faqService: FaqService) { }
 
   ngOnInit(): void {
+    this.list = this.faqService.getFaqItems();
   }
 
+  onNewFaqItem(faqItem: FaqItem) {
+    this.faqService.newFaqItem(faqItem);
+  }
 }
