@@ -73,14 +73,14 @@ textarea.ng-invalid.ng-touched {
 }
 
 .hero {
-  height: 400px;
-  margin: 0 5px;
-  background: url("assets/hero-image.png");
-  background-size: cover;
-  background-position: 0 20%;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
+    height: 400px;
+    margin: 0 5px;
+    background: url("assets/hero-image.png");
+    background-size: cover;
+    background-position: 0 20%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .mat-divider {
