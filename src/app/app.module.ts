@@ -42,6 +42,8 @@ import { AdminProjectsListComponent } from './admin/admin-projects/admin-project
 import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
 import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { FaqAddComponent } from './admin/faq-add/faq-add.component';
+import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     AdminProjectsListComponent,
     AdminProjectsDetailComponent,
     AdminProjectsViewComponent,
+    FaqAddComponent,
+    PreviousProjectsComponent,
   ],
   imports: [
     GalleryModule.forRoot(),
