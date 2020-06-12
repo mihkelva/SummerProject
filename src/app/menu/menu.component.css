@@ -361,7 +361,6 @@
 
 .navbar-dark .navbar-text {
     color: white;
-<<<<<<< HEAD
     border-color: rgba(255, 255, 255, 0.1); }
   
   .navbar-dark .navbar-toggler-icon {
@@ -378,7 +377,6 @@
   display: flex !important;
   justify-content: space-between !important;
   color: red !important;
-=======
 }
 
 .navbar-dark .navbar-text a {
@@ -388,5 +386,4 @@
 .navbar-dark .navbar-text a:hover,
 .navbar-dark .navbar-text a:focus {
     color: #fff;
->>>>>>> 4bfcffc9d54832483fd2e5ee36069d3fe967d1e2
 }
