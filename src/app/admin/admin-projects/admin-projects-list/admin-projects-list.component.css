@@ -22,7 +22,8 @@
   margin-top: 20px;
   display: inline-block;
   flex-grow: 1;
-  width: calc(100% * (1/3) - 10px)
+  border-radius: 10px;
+  width: calc(100% * (1/3) - 10px);
 }
 
 .list-group-item-date {
@@ -30,12 +31,12 @@
   margin-bottom: 10px;
 }
 
-.notActive {
+/* .notActive {
   border: solid 2px red;
-}
+} */
 
 .isActive {
-  border: solid 2px green;
+  border: solid 2px #75b6ab;
 }
 
 input[type="checkbox"] {
@@ -72,4 +73,19 @@ label {
 .alert-danger {
   margin-left: 25%;
   width: 50%;
+}
+
+.list-group-item:hover{
+  transition: .3s all;
+  cursor: pointer;
+  box-shadow: 0 8px 17px 0 rgba(212, 29, 70, 0.05), 0 6px 20px 0 rgba(0,0,0,.15);
+  transition: transform 0.3s;
+  transform: scale(1.02);
+}
+
+.form-control {
+  
+  width: calc(100% * (2/3) - 10px)*3;
+  margin-left: 10% !important;
+  right: 10% !important;
 }

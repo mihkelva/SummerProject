@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xs-12">
             <ng-container *ngFor="let project of projects; let i = index" >
-                <div 
+                <div
                     class="list-group-item clearfix" 
                     [ngClass]="[project.visible ? 'isActive' : 'notActive']"
                     *ngIf="!project.deleted">
@@ -43,7 +43,7 @@
                             </div>
                         </label>
                         <div class="buttons" *ngIf="!project.visible; else projectVisible">
-                            <button class="btn btn-dti" (click)="onQuestionNeeded(i)">Pane kirja kommentaar</button>
+                            <button class="btn btn-dti" (click)="showCommentAdd(project)">Pane kirja kommentaar</button>
                             <button 
                                 class="btn btn-dti" 
                                 (click)="onChangeProject(project)" 
@@ -52,18 +52,21 @@
                         <ng-template #projectVisible>
                             <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
                         </ng-template >
-                        <div *ngFor="let question of project.questions" class="extraQuestion">
-                            {{ question }} <button>X</button>
+                        <div *ngFor="let comment of project.comments" class="extraQuestion">
+                            {{ comment }} <button>X</button>
                         </div>
-                        <div *ngIf="questionNeeded" class="extraQuestion">
-                            <input type="text" class="form-control">
-                            <button class="btn btn-dti" (click)="onAddQuestion()">✓</button>
-                        </div>
+                        <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
+                            <div *ngIf="project.commentButtonActive" class="extraQuestion">
+                                <input type="text" class="form-control" ngModel name="itemQuestion">
+                                <button class="btn btn-dti">✓</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </ng-container>
         </div>
     </div>
+
 </div>
 <div *ngIf="projects.length<1 && !isFetching && !error">
     <div class="header">Ühtegi aktiivset projekti pole</div>
