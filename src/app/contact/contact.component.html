@@ -1,14 +1,16 @@
 <br><br><br>
 <p class="middleHeader">Kontakt</p>
 <div class="rectangle"></div>
-<br><br>
+<br><br><br>
 
 <div class="grid-container">
     <div class="grid-item1">
         <div id="destination" #destinationRef></div>
+        <p class="contact importantText">IDEE ESITAMISEKS TÄIDA VORM <a href="new">SIIN!</a> </p>
+        <br>
         <p class="contact">Küsimused jäid veel vastamata? Kirjuta meile otse! </p>
         <br>
-        <form (ngSubmit)="onSubmitForm(contactForm)" #contactForm="ngForm">
+        <form (ngSubmit)="onSubmitForm(contactForm)" #contactForm="ngForm" class="formStyle">
             <div class="form-group">
                 <label>Nimi: <span class="requiredRed">*</span></label>
                 <input ngModel type="text" class="form-control" id="name" name="name" required>
@@ -32,11 +34,6 @@
             <button [disabled]="!contactForm.valid" class="btn btn-dti">SAADA</button>
         </form>
     </div>  
-    <div class="grid-item2">
-        <br><br><br><br>
-        
-        <mat-faq [faqList]="list"></mat-faq>
-    </div>
 </div>
 <br><br><br>
 <mat-divider _ngcontent-c1="" class="mat-divider mat-divider-horizontal" role="separator" aria-orientation="horizontal">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FaqItem } from '@angular-material-extensions/faq';
+import { FaqService } from './../faq.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  list: FaqItem[] = [];
+  constructor(private faqService: FaqService) { }
 
   ngOnInit(): void {
+    this.list = this.faqService.getFaqItems();
   }
 
 }

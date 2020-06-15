@@ -20,3 +20,53 @@ ul li::before {
     width: 1em; /* Also needed for space (tweak if needed) */
     margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
+
+::ng-deep .mat-form-field-subscript-wrapper {
+    font-size: 100% !important;
+    margin-top: .8em !important;
+    top: calc(100% - 1.7916666667em) !important;
+    padding: 5px !important;    
+}
+
+::ng-deep .mat-form-field-infix {
+    padding: .5em 0 !important;
+    border-top: .84375em solid transparent !important;
+}
+
+::ng-deep .mat-form-field {
+    font-size: inherit !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+::ng-deep .mat-toolbar.mat-primary {
+    background: #6bcaba !important;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 0px;
+}
+.grid-item1 {
+    grid-column: 2/4;
+    grid-row: 1;
+    width: 50%;
+    text-align: justify;
+    padding-right: 50px;
+    
+}
+
+.grid-item2 {
+    grid-column: 3/4;
+    grid-row: 1;
+}
+
+@media only screen and (max-width: 1500px) {
+    .grid-item1 { grid-column: 2 / 5; width: 500px }
+    .grid-item2 { grid-row: 2; grid-column: 2 / 4; }
+  }
