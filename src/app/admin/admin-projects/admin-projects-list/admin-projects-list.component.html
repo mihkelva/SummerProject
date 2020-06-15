@@ -1,5 +1,5 @@
 <div *ngIf="projects.length > 0 && !isFetching">
-    <div class="header">Kõik seni esitatud projektid: </div>
+    <div class="text-center-header">Kõik seni esitatud projektid: </div>
     <br>
     <div class="row">
         <div class="col-xs-12">
@@ -69,9 +69,9 @@
 
 </div>
 <div *ngIf="projects.length<1 && !isFetching && !error">
-    <div class="header">Ühtegi aktiivset projekti pole</div>
+    <div class="text-center-header">Ühtegi aktiivset projekti pole</div>
     <div>See tähendab, et oled kõik projektid eemaldanud ja ühtegi pole seni esitatud. 
         Eelmiste projektide taaslisamiseks mine menüüs "Eelmised projektid" vaatesse ja saad neid uuesti aktiveerida.</div>
 </div>
-<div *ngIf="isFetching && !error" class="header" style="text-align: center;">  <app-loading-spinner></app-loading-spinner></div>
+<div *ngIf="isFetching && !error" class="text-center-header" style="text-align: center;">  <app-loading-spinner></app-loading-spinner></div>
 <div *ngIf="error" class="alert alert-danger">Tuli error: <br><br> {{error.message}}</div>

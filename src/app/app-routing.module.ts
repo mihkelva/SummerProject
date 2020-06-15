@@ -14,6 +14,7 @@ import { FaqAddComponent } from './admin/faq-add/faq-add.component';
 import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
 import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
 import { AuthGuard } from './auth/auth.guard';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 
 const appRoutes: Routes = [
     {path: 'home', component: HomeComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     {path: 'admin/projects/view/:id', component: AdminProjectsViewComponent, canActivate: [AuthGuard] },
     {path: 'admin/faq', component: FaqAddComponent, canActivate: [AuthGuard] },
     {path: 'admin/previous', component: PreviousProjectsComponent, canActivate: [AuthGuard] },
-    {path: 'admin/users', component: UsersListComponent, canActivate: [AuthGuard] },
+    {path: 'admin/users', component: AdminUsersComponent, canActivate: [AuthGuard] },
+    {path: 'admin/users/list', component: UsersListComponent, canActivate: [AuthGuard] },
     {path: 'admin/users/new', component: NewUserComponent, canActivate: [AuthGuard] },
     {path: '**', redirectTo: '/home' },
     {path: '', redirectTo: '/home', pathMatch: 'full' },

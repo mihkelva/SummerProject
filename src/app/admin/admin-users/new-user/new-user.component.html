@@ -1,25 +1,42 @@
-<br>
 <div *ngIf="!isLoading">
-<p class="header">Registreeri siit uus kasutaja: </p>
+    <div class="text-center-header">Registreeri siit uus kasutaja:</div>
 <br><br>
 
 <form (ngSubmit)="onSignUp(signupForm)" #signupForm="ngForm">
-    <div class="form-group half">
-        <label>Uue kasutaja e-mail:</label>
+    <div class="form-group">
+        <label>Rühma number:</label>
+        <input
+            ngModel 
+            name="number"
+            type="number" 
+            class="form-control" 
+            id="number">    
+    </div>
+    <div class="form-group">
+        <label>Kasutaja projekt:</label>
+        <input
+            ngModel 
+            name="project"
+            type="number" 
+            class="form-control" 
+            id="project">    
+    </div>
+    <div class="form-group">
+        <label>Sisselogimiseks e-mail:</label>
         <input
             ngModel 
             name="username"
             type="text" 
-            class="form-control half" 
+            class="form-control" 
             id="username">    
     </div>
-    <div class="form-group half">
-        <label>Uue kasutaja parool:</label>
+    <div class="form-group">
+        <label>Kasutaja parool:</label>
         <input 
             ngModel 
             name="password"
             type="text" 
-            class="form-control half" 
+            class="form-control" 
             id="password">    
     </div>
     <br>
