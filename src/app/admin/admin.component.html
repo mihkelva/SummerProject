@@ -2,7 +2,7 @@
 <p class="header">Õppejõud, logi siit sisse: </p>
 <br><br>
 <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
-<form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+<form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm" class="login">
     <div class="form-group half">
         <label>Kasutajanimi:</label>
         <input
