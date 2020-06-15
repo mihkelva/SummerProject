@@ -29,6 +29,7 @@ export class NewUserComponent implements OnInit {
         console.log(resData);
         this.isLoading = false;
     }, error => {
+      console.log(error);
       this.error = error;
       this.isLoading = false;
     });

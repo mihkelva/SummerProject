@@ -134,6 +134,12 @@ export class AuthService {
       case 'EMAIL_EXISTS':
         errorMessage = 'See e-mail on juba olemas.';
         break;
+      case 'WEAK_PASSWORD : Password should be at least 6 characters':
+        errorMessage = 'Parool peab olema vähemalt 6-kohaline.';
+        break;
+      case 'MISSING_PASSWORD':
+        errorMessage = 'Palun sisesta parool.';
+        break;
       case 'EMAIL_NOT_FOUND':
         errorMessage = 'Sellist e-maili ei eksisteeri.';
         break;

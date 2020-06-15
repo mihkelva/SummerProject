@@ -1,3 +1,5 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { ModalService } from './../shared/success-modal/modal.service';
 import { ProjectService } from './../project.service';
 import { Project } from './project.model';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +13,10 @@ import { NgForm } from '@angular/forms';
 export class NewProjectComponent implements OnInit {
   // projectForm: FormGroup;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService,
+              private modalService: ModalService, 
+              private route: ActivatedRoute, 
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +33,12 @@ export class NewProjectComponent implements OnInit {
       formValue.support,
       formValue.additional
       );
-      this.projectService.uploadProject(newProject);
+      // this.projectService.uploadProject(newProject);
+      this.modalService.showModal({title: "Projekt esitatud!", 
+      description: "Aitäh, et toetad Tallinna Ülikooli tudengeid! Anname tagasisidet niipea, kui võimalik. Pane tähele, et projekt saab valmis alles juunikuu lõpus."
+      });
+      form.reset();
+      this.router.navigate(["/"], {relativeTo: this.route});
   }
 
   

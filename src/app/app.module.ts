@@ -1,3 +1,4 @@
+import { MatDialogModule } from '@angular/material/dialog';
 import { NewUserComponent } from './admin/admin-users/new-user/new-user.component';
 import { UsersListComponent } from './admin/admin-users/users-list/users-list.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -50,6 +51,7 @@ import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects
 import { AuthComponent } from './auth/auth.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     AdminUsersComponent,
     UsersListComponent,
     NewUserComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    SuccessModalComponent
   ],
   imports: [
     GalleryModule.forRoot(),
@@ -90,7 +93,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     RouterModule,
     BrowserAnimationsModule,
     MatFaqModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
     
   ],
   providers: [ProjectService, DataStorageService, Location],

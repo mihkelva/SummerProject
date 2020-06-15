@@ -101,3 +101,23 @@ textarea.ng-invalid.ng-touched {
     margin-left: auto;
     margin-right: auto;
 }
+
+.custom-no-padding-dialog {
+    margin-top: -50px;
+    padding: 0;
+}
+
+.custom-darker-modal-backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.bold-center {
+    font-size: 10rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.text-center {
+    font-size: 5rem;
+    text-align: center;
+}
