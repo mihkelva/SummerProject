@@ -1,66 +1,74 @@
-<div class="header">Kõik seni esitatud projektid: </div>
-<br>
-<div class="row">
-    <div class="col-xs-12">
-        <ng-container *ngFor="let project of projects; let i = index" >
-            <div 
-                class="list-group-item clearfix" 
-                [ngClass]="[project.visible ? 'isActive' : 'notActive']"
-                *ngIf="!project.deleted">
-                <div>
-                    <label>
-                        <input
-                            [(ngModel)]="project.visible"
-                            type="checkbox">
-                        <div class="list-group-item-header">
-                            <div class="list-group-item-date">
-                                Esitatud: 12.06.2020
+<div *ngIf="projects.length > 0 && !isFetching">
+    <div class="header">Kõik seni esitatud projektid: </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <ng-container *ngFor="let project of projects; let i = index" >
+                <div 
+                    class="list-group-item clearfix" 
+                    [ngClass]="[project.visible ? 'isActive' : 'notActive']"
+                    *ngIf="!project.deleted">
+                    <div>
+                        <label>
+                            <input
+                                [(ngModel)]="project.visible"
+                                type="checkbox">
+                            <div class="list-group-item-header">
+                                <div class="list-group-item-date">
+                                    Esitatud: 12.06.2020
+                                </div>
+                                <button
+                                    *ngIf="!project.visible"
+                                    (click)="project.deleted = true" 
+                                    class="list-group-item-delete-button">
+                                    X</button>
                             </div>
-                            <button
-                                *ngIf="!project.visible"
-                                (click)="project.deleted = true" 
-                                class="list-group-item-delete-button">
-                                X</button>
+                            <div class="list-group-item-heading">
+                                Projekti nimi: <b> {{ project.name }} </b>
+                            </div>
+                            <div class="list-group-item-description">
+                                Projekti sisu: {{ project.description }} Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                            <hr>
+                            <div class="list-group-item-additional">
+                                Tudengite toetuseks: {{ project.additional }}
+                            </div>
+                            <div class="list-group-item-support">
+                                Lisainformatsioon: {{ project.support }}
+                            </div>
+                            <div class="list-group-item-contact">
+                                Projekti esitas: {{ project.contactName }}
+                                (telefoninumber: {{ project.contactPhone }},
+                                e-mail: {{ project.contactEmail }})
+                            </div>
+                        </label>
+                        <div class="buttons" *ngIf="!project.visible; else projectVisible">
+                            <button class="btn btn-dti" (click)="onQuestionNeeded(i)">Pane kirja kommentaar</button>
+                            <button 
+                                class="btn btn-dti" 
+                                (click)="onChangeProject(project)" 
+                                [routerLink]="['edit',project.firebaseId]">Muuda projekti (ka andmebaasis!)</button>
                         </div>
-                        <div class="list-group-item-heading">
-                            Projekti nimi: <b> {{ project.name }} </b>
+                        <ng-template #projectVisible>
+                            <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
+                        </ng-template >
+                        <div *ngFor="let question of project.questions" class="extraQuestion">
+                            {{ question }} <button>X</button>
                         </div>
-                        <div class="list-group-item-description">
-                            Projekti sisu: {{ project.description }} Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        <div *ngIf="questionNeeded" class="extraQuestion">
+                            <input type="text" class="form-control">
+                            <button class="btn btn-dti" (click)="onAddQuestion()">✓</button>
                         </div>
-                        <hr>
-                        <div class="list-group-item-additional">
-                            Tudengite toetuseks: {{ project.additional }}
-                        </div>
-                        <div class="list-group-item-support">
-                            Lisainformatsioon: {{ project.support }}
-                        </div>
-                        <div class="list-group-item-contact">
-                            Projekti esitas: {{ project.contactName }}
-                            (telefoninumber: {{ project.contactPhone }},
-                            e-mail: {{ project.contactEmail }})
-                        </div>
-                    </label>
-                    <div class="buttons" *ngIf="!project.visible; else projectVisible">
-                        <button class="btn btn-dti" (click)="onQuestionNeeded(i)">Pane kirja kommentaar</button>
-                        <button 
-                            class="btn btn-dti" 
-                            (click)="onChangeProject(project)" 
-                            [routerLink]="['edit',project.id]">Muuda projekti (ka andmebaasis!)</button>
-                    </div>
-                    <ng-template #projectVisible>
-                        <button class="btn btn-dti" (click)="onProjectInfo()">Vaata projekti seisu</button>
-                    </ng-template >
-                    <div *ngFor="let question of project.questions" class="extraQuestion">
-                        {{ question }} <button>X</button>
-                    </div>
-                    <div *ngIf="questionNeeded" class="extraQuestion">
-                        <input type="text" class="form-control">
-                        <button class="btn btn-dti" (click)="onAddQuestion()">✓</button>
                     </div>
                 </div>
-            </div>
-        </ng-container>
+            </ng-container>
+        </div>
     </div>
 </div>
-<router-outlet></router-outlet>
+<div *ngIf="projects.length<1 && !isFetching && !error">
+    <div class="header">Ühtegi aktiivset projekti pole</div>
+    <div>See tähendab, et oled kõik projektid eemaldanud ja ühtegi pole seni esitatud. 
+        Eelmiste projektide taaslisamiseks mine menüüs "Eelmised projektid" vaatesse ja saad neid uuesti aktiveerida.</div>
+</div>
+<div *ngIf="isFetching && !error" class="header" style="text-align: center;">  <app-loading-spinner></app-loading-spinner></div>
+<div *ngIf="error" class="alert alert-danger">Tuli error: <br><br> {{error.message}}</div>

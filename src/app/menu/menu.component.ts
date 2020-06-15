@@ -1,3 +1,4 @@
+import { AuthService } from './../auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ResolveEnd } from '@angular/router';
 
@@ -11,7 +12,7 @@ export class MenuComponent implements OnInit {
   isBackMenu: boolean = false;
   isAdminMenu: boolean = false;
 
-  constructor(private router: Router ) { }
+  constructor(private router: Router, private authService: AuthService ) { }
 
   ngOnInit(): void {
       this.router.events.subscribe((routerData) => {
@@ -32,7 +33,8 @@ export class MenuComponent implements OnInit {
            if(routerData.url === '/admin/projects' ||
               routerData.url === '/admin/faq' ||
               routerData.url === '/admin/projects/new' ||
-              routerData.url === '/admin/previous'){
+              routerData.url === '/admin/previous' ||
+              routerData.url === '/admin/users'){
             this.isAdminMenu=true;
            } else {
             this.isAdminMenu=false;
@@ -48,5 +50,8 @@ export class MenuComponent implements OnInit {
     el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
+  onLogout() {
+    this.authService.logout();
+  }
 
 }

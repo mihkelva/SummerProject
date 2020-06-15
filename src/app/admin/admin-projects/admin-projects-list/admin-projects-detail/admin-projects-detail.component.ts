@@ -11,7 +11,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class AdminProjectsDetailComponent implements OnInit {
   project: Project;
-  id: number;
+  id: string;
 
   editMode = false;
   projectForm: FormGroup;
@@ -24,8 +24,8 @@ export class AdminProjectsDetailComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.id = +params['id'];
-          this.project = this.projectService.getProject(this.id-1);
+          this.id = params['id'];
+          this.project = this.projectService.getProject(this.id);
           this.editMode = params['id'] != null;
           this.initForm();
         }
@@ -41,7 +41,7 @@ export class AdminProjectsDetailComponent implements OnInit {
     let contactPhone = "";
     let contactEmail = "";
 
-    const project = this.projectService.getProject(this.id-1);
+    const project = this.projectService.getProject(this.id);
     projectName = project.name;
     projectDescription = project.description;
     additional = project.additional;
@@ -63,7 +63,7 @@ export class AdminProjectsDetailComponent implements OnInit {
 
   onSubmit() {
     this.projectForm.value.id = this.id;
-    this.projectService.updateProject(this.id-1, this.projectForm.value);
+    this.projectService.updateProject(this.id, this.projectForm.value);
     this.router.navigate(['..'], {relativeTo: this.route});
   }
 

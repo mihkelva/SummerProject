@@ -9,7 +9,8 @@ export class Project {
     public support: string;
     public deleted: boolean;
     public visible: boolean;
-    public questions: string[];
+    public comments: string[];
+    public firebaseId?: string;
 
     constructor(
         id: number,
@@ -30,6 +31,6 @@ export class Project {
             this.support = support;
             this.deleted = false;
             this.visible = false;
-            this.questions = [];
+            this.comments = [];
     }
 }

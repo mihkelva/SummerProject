@@ -1,10 +1,15 @@
 import { Project } from './new-project/project.model';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject } from 'rxjs/Subject';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/internal/operators/map';
 
 @Injectable()
 export class ProjectService {
     projectsChanged = new Subject<Project[]>();
+    error = new Subject<string>();;
+
+    constructor(private http: HttpClient){}
    
     private projects: Project[] = [
         new Project(
@@ -73,12 +78,42 @@ export class ProjectService {
         return this.projects.slice();
     }
 
-    getProject(index: number) {
-        return this.projects[index];
+    getProject(index: string) {
+        return this.projects.find(project => project.firebaseId === index);
     }
 
-    updateProject(index: number, updatedProject: Project) {
+    updateProject(index: string, updatedProject: Project) {
         this.projects[index] = updatedProject;
         this.projectsChanged.next(this.projects.slice());
-      }
+    }
+
+    uploadProject(newProject: Project) {
+        this.http.post('https://summerproject-d48ac.firebaseio.com/projects.json', newProject).subscribe(
+        responseData => {
+          console.log(responseData);
+        }),
+        error => {
+            this.error.next(error.message);
+        }
+        //end
+    }
+
+    fetchProjects() {
+        return this.http.get<{ [key: string]: Project }>('https://summerproject-d48ac.firebaseio.com/projects.json')
+            // .pipe((map(projects => {
+            //     return projects.map(project => {
+            //         return {...project, comments: project.comments ? project.comments : []}
+            //     })
+            // })))
+            .pipe(map(responseData=> {
+              const projectsArray: Project[] = [];
+              for (const key in responseData) {
+                if(responseData.hasOwnProperty(key)) {
+                  projectsArray.push({ ...responseData[key], firebaseId: key})
+                }
+              }
+              this.projects = projectsArray;
+              return projectsArray;
+            }));
+    }
 }

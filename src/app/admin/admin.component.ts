@@ -1,6 +1,8 @@
+import { AuthService, AuthResponseData } from './../auth/auth.service';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-admin',
@@ -8,18 +10,41 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  isLoading = false;
+  error: string = null;
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
+    this.authService.autoLogin();
   }
 
   onLogin(loginForm: NgForm) {
+    if (!loginForm.valid) {
+      return;
+    }
+    this.isLoading = true;
+    let authObs: Observable<AuthResponseData>;
     console.log(loginForm.value)
-    this.router.navigate(["projects"], { relativeTo: this.route })
+    authObs = this.authService.login(loginForm.value.username, loginForm.value.password);
+    authObs.subscribe(
+      resData => {
+        console.log(resData);
+        this.isLoading = false;
+        this.router.navigate(["projects"], { relativeTo: this.route });
+      },
+      errorMessage => {
+        console.log(errorMessage);
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    );
+
+    loginForm.reset();
   }
 
 }

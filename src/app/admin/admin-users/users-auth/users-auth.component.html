@@ -1,8 +1,8 @@
 <br>
-<p class="header">Õppejõud, logi siit sisse: </p>
+<p class="header">Enne lehele minemist kinnita uuesti kasutajanimi ja parool: </p>
 <br><br>
-<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
-<form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+
+<form (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
     <div class="form-group half">
         <label>Kasutajanimi:</label>
         <input
@@ -24,5 +24,5 @@
     <br>
     <button 
             [disabled]="false" 
-            class="btn btn-dti mt-3">LOGI SISSE</button>
+            class="btn btn-dti mt-3">KINNITA</button>
 </form>

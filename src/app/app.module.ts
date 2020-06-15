@@ -1,3 +1,6 @@
+import { NewUserComponent } from './admin/admin-users/new-user/new-user.component';
+import { UsersListComponent } from './admin/admin-users/users-list/users-list.component';
+import { HttpClientModule } from '@angular/common/http';
 import { DataStorageService } from './database/data-storage.service';
 import { ProjectService } from './project.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +10,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatFaqModule } from '@angular-material-extensions/faq';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -44,6 +47,9 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FaqAddComponent } from './admin/faq-add/faq-add.component';
 import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
 import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-new/admin-projects-new.component';
+import { AuthComponent } from './auth/auth.component';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +72,11 @@ import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects
     FaqAddComponent,
     PreviousProjectsComponent,
     AdminProjectsNewComponent,
+    AuthComponent,
+    AdminUsersComponent,
+    UsersListComponent,
+    NewUserComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     GalleryModule.forRoot(),
@@ -78,7 +89,8 @@ import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatFaqModule
+    MatFaqModule,
+    HttpClientModule
     
   ],
   providers: [ProjectService, DataStorageService, Location],

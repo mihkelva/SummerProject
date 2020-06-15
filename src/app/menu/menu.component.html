@@ -45,16 +45,22 @@
         <div *ngIf="isAdminMenu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin/projects">Kõik projektid </a>
+                    <a class="nav-link" routerLink="/admin/projects">Projektid </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin/projects/new">Lisa ise projekt </a>
+                    <a class="nav-link" routerLink="/admin/projects/new">Lisa projekt </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin/faq">Lisa KKK küsimus ja vastus </a>
+                    <a class="nav-link" routerLink="/admin/faq">KKK </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin/previous">Halda varasemate projektide vaadet </a>
+                    <a class="nav-link" routerLink="/admin/previous">Varasemad projektid </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/users">Kasutajad </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onLogout()" routerLink="/">Logi välja </a>
                 </li>
             </ul>
         </div>

@@ -28,7 +28,7 @@ export class NewProjectComponent implements OnInit {
       formValue.support,
       formValue.additional
       );
-    this.projectService.addProject(newProject);
+      this.projectService.uploadProject(newProject);
   }
 
   
