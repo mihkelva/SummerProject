@@ -63,7 +63,7 @@ export class AdminProjectsDetailComponent implements OnInit {
 
   onSubmit() {
     this.projectForm.value.id = this.id;
-    this.projectService.updateProject(this.id, this.projectForm.value);
+    // this.projectService.updateProject(this.id, this.projectForm.value);
     this.router.navigate(['..'], {relativeTo: this.route});
   }
 

@@ -121,3 +121,12 @@ textarea.ng-invalid.ng-touched {
     font-size: 5rem;
     text-align: center;
 }
+
+.text-center-header {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 1;
+    font-weight: 500;
+  }
+  

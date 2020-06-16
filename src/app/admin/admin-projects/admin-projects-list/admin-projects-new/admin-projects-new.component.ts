@@ -24,7 +24,6 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
   onAddNewProject(form: NgForm) {
     const formValue = form.value;
     const newProject = new Project(
-      this.projectService.getProjects().length+1,
       formValue.name, 
       formValue.phone,
       formValue.email,

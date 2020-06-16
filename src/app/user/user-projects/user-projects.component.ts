@@ -10,7 +10,7 @@ import { ProjectService } from 'src/app/project.service';
 })
 export class UserProjectsComponent implements OnInit {
   year = new Date().getFullYear();
-  selectedProject;
+  error = null;
 
   projects: Project[] = [];
 
@@ -20,6 +20,10 @@ export class UserProjectsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.projects = this.projectService.getProjects();
+    this.projectService.fetchProjects().subscribe(projects => {
+      this.projects = projects;
+    }, error => {
+      this.error = error;
+    });
   }
 }

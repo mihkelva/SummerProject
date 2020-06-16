@@ -34,7 +34,9 @@ export class MenuComponent implements OnInit {
               routerData.url === '/admin/faq' ||
               routerData.url === '/admin/projects/new' ||
               routerData.url === '/admin/previous' ||
-              routerData.url === '/admin/users'){
+              routerData.url === '/admin/users' ||
+              routerData.url === '/admin/users/new'  ||
+              routerData.url === '/admin/users/list'){
             this.isAdminMenu=true;
            } else {
             this.isAdminMenu=false;

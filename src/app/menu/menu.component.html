@@ -8,30 +8,42 @@
     <div class="collapse navbar-collapse " id="navbar-collapsible">
         <div *ngIf="isHomeMenu" class="homeMenu">
             <div>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/">Kodu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="500">Tehtud tööd</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/">Kodu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> / </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="500">Tehtud tööd</a>
 
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1200">Meist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> / </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1200">Meist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> / </a>
+                    </li>
 
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1600">Kontakt</a>
+                    <li class="nav-item">
+                        <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="1600">Kontakt</a>
 
-                </li>
-            </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> / </a>
+                    </li>
+                </ul>
             </div>
             <div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="new">Esita projekt</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="new">Esita projekt</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div *ngIf="isBackMenu">
@@ -48,16 +60,31 @@
                     <a class="nav-link" routerLink="/admin/projects">Projektid </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link"> / </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" routerLink="/admin/projects/new">Lisa projekt </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"> / </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/admin/faq">KKK </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link"> / </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" routerLink="/admin/previous">Varasemad projektid </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link"> / </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" routerLink="/admin/users">Kasutajad </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"> / </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" (click)="onLogout()" routerLink="/">Logi välja </a>

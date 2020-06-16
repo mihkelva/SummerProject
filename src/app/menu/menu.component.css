@@ -276,7 +276,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: "Times New Roman", Times, sans-serif;
     text-transform: uppercase;
     font-style: italic;
@@ -306,19 +306,11 @@
 
 .navbar-dark .navbar-text {
     color: white;
-    border-color: rgba(255, 255, 255, 0.1); }
-  
-  .navbar-dark .navbar-text {
-    color: white; }
-    .navbar-dark .navbar-text a {
-      color: #fff; }
-      .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-        color: #fff; }
+    border-color: rgba(255, 255, 255, 0.1);
+}
 
-.homeMenu {
-  display: flex !important;
-  justify-content: space-between !important;
-  color: red !important;
+.navbar-dark .navbar-text {
+    color: white;
 }
 
 .navbar-dark .navbar-text a {
@@ -330,6 +322,17 @@
     color: #fff;
 }
 
-li {
-    border-right: 1px solid black;
+.homeMenu {
+    display: flex !important;
+    justify-content: space-between !important;
+    color: red !important;
+}
+
+.navbar-dark .navbar-text a {
+    color: #fff;
+}
+
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+    color: #fff;
 }
