@@ -41,24 +41,22 @@ export class AdminProjectsListComponent implements OnInit, OnDestroy {
 
   onAddQuestion(project, form: NgForm) {
     const itemQuestion = form.value.itemQuestion;
-    // console.log(itemQuestion);
     this.projects.forEach(pr => {
       if (pr == project) {
-        console.log(pr);
-        console.log(project);
-        console.log(project.comments);
         pr.comments.push(itemQuestion);
-        console.log(project.comments);
-        console.log(this.projects);
       }
-    })
-  }
-
-  onProjectInfo() {
-    console.log("project info appears");
+    });
   }
 
   onChangeProject(project) {
+  }
+
+  onDeleteComment(project, index: number) {
+    this.projects.forEach(pr => {
+      if (pr == project) {
+        pr.comments.splice(index, 1);
+      }
+    });
   }
 
   ngOnDestroy(): void {

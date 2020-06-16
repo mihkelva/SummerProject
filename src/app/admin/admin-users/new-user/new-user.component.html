@@ -14,12 +14,14 @@
     </div>
     <div class="form-group">
         <label>Kasutaja projekt:</label>
-        <input
-            ngModel 
-            name="project"
-            type="number" 
-            class="form-control" 
-            id="project">    
+          <form #form="ngForm">
+            <mat-form-field>
+              <mat-label class="matLabel">Vali projekt</mat-label>
+              <mat-select matInput name="mySelect" class="matSelect">
+                <mat-option *ngFor="let project of projects" [value]="project.name" class="matOption">{{project.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
     </div>
     <div class="form-group">
         <label>Sisselogimiseks e-mail:</label>

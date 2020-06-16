@@ -3,7 +3,7 @@
     <br>
     <div class="row">
         <div class="col-xs-12">
-            <ng-container *ngFor="let project of projects; let i = index" >
+            <ng-container *ngFor="let project of projects" >
                 <div
                     class="list-group-item clearfix" 
                     [ngClass]="[project.visible ? 'isActive' : 'notActive']"
@@ -52,8 +52,8 @@
                         <ng-template #projectVisible>
                             <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
                         </ng-template >
-                        <div *ngFor="let comment of project.comments" class="extraQuestion">
-                            {{ comment }} <button>X</button>
+                        <div *ngFor="let comment of project.comments; let i = index" class="extraQuestion">
+                            {{ comment }} <button (click)="onDeleteComment(project, i)">X</button>
                         </div>
                         <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
                             <div *ngIf="project.commentButtonActive" class="extraQuestion">

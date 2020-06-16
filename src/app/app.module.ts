@@ -11,6 +11,9 @@ import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatFaqModule } from '@angular-material-extensions/faq';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -93,8 +96,10 @@ import { SuccessModalComponent } from './shared/success-modal/success-modal.comp
     BrowserAnimationsModule,
     MatFaqModule,
     HttpClientModule,
-    MatDialogModule
-    
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [ProjectService, Location],
   bootstrap: [AppComponent]
