@@ -337,3 +337,25 @@
 .navbar-dark .navbar-text a:focus {
     color: #fff;
 }
+
+:root {
+    /* setting var for nav height, you can do this however you want */
+    --sticky-nav-height: 40px;
+    z-index: 99;
+    position: sticky;
+}
+
+.sticky-nav-wrapper {
+    /* set min height on wrapper so that the page
+       doesn't awkwardly snap and lose height */
+    min-height: var(--sticky-nav-height);
+    z-index: 99;
+    position: sticky;
+}
+
+.sticky-nav {
+    height: var(--sticky-nav-height);
+    /* other styles */
+    z-index: 99;
+    position: sticky;
+}

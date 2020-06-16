@@ -34,6 +34,7 @@
     "jquery": "^3.5.1",
     "material-design-icons": "^3.0.1",
     "mousetrap": "^1.6.5",
+    "ng2-sticky-nav": "^9.0.0",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
     "tslib": "^1.10.0",

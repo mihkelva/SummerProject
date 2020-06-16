@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
 import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
@@ -54,6 +55,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
+import { StickyNavModule } from 'ng2-sticky-nav';
 import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
 
 
@@ -102,6 +104,7 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
+    StickyNavModule,
     AngularToastifyModule
   ],
   providers: [ProjectService, ToastService, Location],
