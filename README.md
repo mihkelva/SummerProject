@@ -45,6 +45,7 @@ npm install -s @angular-material-extensions/faq
 Requires:
 `````
 npm install @nicky-lenaers/ngx-scroll-to
+npm install ng2-sticky-nav --save
 `````
 
 Update the imports in node_modules/@angular-material-extensions/faq/esm2015/faq.js
