@@ -54,6 +54,8 @@ import { AuthComponent } from './auth/auth.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
+import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+
 
 @NgModule({
   declarations: [
@@ -99,9 +101,10 @@ import { SuccessModalComponent } from './shared/success-modal/success-modal.comp
     MatDialogModule,
     MatInputModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    AngularToastifyModule
   ],
-  providers: [ProjectService, Location],
+  providers: [ProjectService, ToastService, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
