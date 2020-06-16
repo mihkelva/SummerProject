@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url("import-style.css");
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 * {
     font-family: "Baloo Tammudu 2";
@@ -130,5 +129,8 @@ textarea.ng-invalid.ng-touched {
     margin-top: 50px;
     line-height: 1;
     font-weight: 500;
-  }
-  
+}
+
+.bg-dti {
+    background-color: #6bcaba !important;
+}
