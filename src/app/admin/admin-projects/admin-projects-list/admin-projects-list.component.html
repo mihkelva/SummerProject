@@ -54,7 +54,7 @@
                             <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
                         </ng-template >
                         <div *ngFor="let comment of project.comments" class="extraQuestion">
-                            {{ comment }} <button>X</button>
+                            {{ comment }} <p></p> <button class="closeButton">X</button>
                         </div>
                         <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
                             <div *ngIf="project.commentButtonActive" class="extraQuestion">
