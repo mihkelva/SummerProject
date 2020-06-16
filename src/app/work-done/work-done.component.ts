@@ -19,8 +19,8 @@ export class WorkDoneComponent implements OnInit {
       0,
       {
         img: '../../assets/tark_maja_pic.png',
-        // description: 'Tark-maja',
-        // title: 'Tark-maja',
+        description: 'Arendasime projekti targa maja jaoks suvepraktika raames. Tarkvara eesmärk on tekitada inimestele võimalus oma elektriseadmete tarbimist paremini reguleerida. Kasutajal on võimalus valida oma elektriseadmetel teatud tingimused, näiteks mis kellaaegadel peab elektriseade kindlasti töötama, millise võimsuse juures lülitab seade end välja. Meie rakendus loob vastavalt kasutajate seatud tingimustele töögraafiku, millal seade töötab.',
+        title: 'Tark-maja',
         alt: 'Tark-maja',
         ariaLabel: 'Tark-maja projekti pilt' 
       },
@@ -36,8 +36,8 @@ export class WorkDoneComponent implements OnInit {
       1, 
       { 
         img: '../../assets/game_design_img.gif',
-        // description:'Mängudisaini projekt',
-        // title: 'Mängudisaini projekt',
+        description:"Mängu eesmärk on lahendada TLÜ Astra maja 4. korrusel DTI õppejõudude poolt antavaid ülesandeid ja teenida ainepunkte (EAP). Lõppeesmärk on lõpetada semester, ehk teenida 30EAPd. Mängu raskendamiseks on ka erinevad takistused (minigame'id), mis kaotavad EAPsid vastavalt sellele, kui hästi või halvasti minigame'i läbimine õnnestus.",
+        title: 'Mängudisaini projekt',
         alt: 'Mängudisaini projekt',
         ariaLabel: 'Mängudisaini projekti pilt' 
       }, 
@@ -53,8 +53,8 @@ export class WorkDoneComponent implements OnInit {
       2,
       {
         img: '../../assets/tantsumeka_pic.png',
-        // description: 'Tantsumeka veebileht',
-        // title: 'Tantsumeka veebileht',
+        description: 'Lõime Tantsumekale uue ja tänapäevase veebilehe, mis toimiks ka nutiseadmetes. Klient soovis lehele uut disaini, poodi, foorumit ning registreerimisvormi.',
+        title: 'Tantsumeka veebileht',
         alt: 'Tantsumeka veebileht',
         ariaLabel: 'Tantsumeka veebilehe pilt'
       },
@@ -70,8 +70,8 @@ export class WorkDoneComponent implements OnInit {
       3,
       {
         img: '../../assets/Stressikaart_pic.jpg',
-        // description: 'Stressikaart',
-        // title: 'Stressikaart',
+        description: 'Eesmärk oli luua kliendile ajulainete ja GPSi andmete põhjal kaardirakendus, mis kuvab suhtelist stressitaset kohtades, kus on läbi viidud eksperiment. Eksperimendiks kasutatakse nutitelefoni (GPS andmete kogumiseks) ja Muse peavõru (ajulainete andmete kogumiseks). Selleks, et stressitaset kaardil kuvada, tuleb sisestada CSV failidena Muse andmed, GPX failidena Endomondo andmed ja need omavahel ühendada. Projekt on loodud Tallinna Ülikooli Digitehnoloogiate instituudis tarkvaraarenduse praktika kursuse raames.',
+        title: 'Stressikaart',
         alt: 'Stressikaart',
         ariaLabel: 'Stressikaardi projekti pilt'
       },
@@ -85,35 +85,35 @@ export class WorkDoneComponent implements OnInit {
     new Image(
       4,
       {
-        img: '../../assets/Quizify.jpg',
-        // description: 'Quizify',
-        // title: 'Quizify',
-        alt: 'Quizify',
-        ariaLabel: 'Quizify projekti pilt' 
+        img: '../../assets/tookeskkond_pic.jpg',
+        description: 'Projekti eesmärgiks oli luua töötav lahendus töökeskkonna monitoorimiseks. Seade tegeleb temperatuuri, niiskuse ja valgustiheduse mõõtmisega. Peale seda saadab andmed andmebaasi ning veebilehel kuvatakse näidud juba tabeli- ja graafikukujul. Graafikul on ka näha alampiire. Üle/alla mille näitavad peavad olema. Projekt on loodud Digitehnoloogia Instituudi informaatika eriala esimese aasta Tarkvaraarenduse Praktika aine suvepraktika raames.',
+        title: 'Töökeskkonna Monitoorimise Seade',
+        alt: 'Töökeskkonna Monitoorimise Seade',
+        ariaLabel: 'Töökeskkonna Monitoorimise Seade projekti pilt' 
       }, 
       { 
-        img: '../../assets/Quizify.jpg',
-        // description: 'Quizify',
-        // title: 'Quizify',
-        alt: 'Quizify',
-        ariaLabel: 'Quizify projekti pisipilt' 
+        img: '../../assets/tookeskkond_pic.jpg',
+        // description: 'Töökeskkonna Monitoorimise Seade',
+        // title: 'Töökeskkonna Monitoorimise Seade',
+        alt: 'Töökeskkonna Monitoorimise Seade',
+        ariaLabel: 'Töökeskkonna Monitoorimise Seade projekti pisipilt' 
       }
     ),
     new Image(
       5, 
       { 
-        img: '../../assets/Hasartmängusõltuvus.png',
-        // description:'Mängudisaini projekt',
-        // title: 'Mängudisaini projekt',
-        alt: 'Mängudisaini projekt',
-        ariaLabel: 'Mängudisaini projekti pilt' 
+        img: '../../assets/maatriks_pic.png',
+        description:'Kliendi soov oli saada mugav ja lihtne maatriksite kalkulaator, mida saaks meiesugused tudengid kasutada. Valida on praegu võimalik kolme erineva maatriksi kalkulaatori vahel: tavaline maatriksite korrutamine, determinantide arvutamine ja pöördmaatriks. Lisaks lahendusele, on võimalik ka näha, kuidas arvutusprotsess käib. See projekt on loodud Tallinna Ülikoolis Digitehnoloogiate instituutis kursuse IFI6213.DT Tarkvaraarenduse praktika raames.',
+        title: 'Maatriksi kalkulator',
+        alt: 'Maatriksi kalkulator projekt',
+        ariaLabel: 'Maatriksi kalkulator projekti pilt' 
       }, 
       {
-        img: '../../assets/Hasartmängusõltuvus.png',
-        // description: 'Mängudisaini projekt',
-        // title: 'Mängudisaini projekt',
-        alt: 'Mängudisaini projekt',
-        ariaLabel: 'Tark-maja projekti pisipilt' 
+        img: '../../assets/maatriks_pic.png',
+        // description: 'Maatriksi kalkulator',
+        // title: 'Maatriksi kalkulator',
+        alt: 'Maatriksi kalkulator',
+        ariaLabel: 'Maatriksi kalkulator projekti pisipilt' 
       }
     ),
     

@@ -17,10 +17,12 @@
 }
 
 .box-width {
-    min-width: 1000px;
+    min-width: 550px;
 }
 
-@media only screen and (max-width: 1500px) {
-    .grid-item1 { grid-column: 1 / 4; width: 500px}
-    .grid-item2 { grid-row: 2; grid-column: 2 / 4; }
+@media only screen and (max-width: 700px) {
+    .grid-item1 { grid-column: 1 / 4; width: 300px; padding-right: 30px;}
+    .grid-item2 { grid-row: 2; grid-column: 2 / 4; margin-top: 10%;}
+    .box-width { min-width: 700px; margin-left: -100px;}
+    .form-group { font-size: small; }
   }
