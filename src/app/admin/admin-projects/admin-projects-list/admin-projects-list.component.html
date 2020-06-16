@@ -1,6 +1,10 @@
 <div *ngIf="projects.length > 0 && !isFetching">
+
+    <br><br>
+
     <div class="text-center-header">Kõik seni esitatud projektid: </div>
     <br>
+
     <div class="row">
         <div class="col-xs-12">
             <ng-container *ngFor="let project of projects" >
@@ -53,7 +57,7 @@
                             <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
                         </ng-template >
                         <div *ngFor="let comment of project.comments; let i = index" class="extraQuestion">
-                            {{ comment }} <button (click)="onDeleteComment(project, i)">X</button>
+                            {{ comment }} <p></p> <button (click)="onDeleteComment(project, i)">X</button>
                         </div>
                         <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
                             <div *ngIf="project.commentButtonActive" class="extraQuestion">
