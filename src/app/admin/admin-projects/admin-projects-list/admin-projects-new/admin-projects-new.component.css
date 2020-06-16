@@ -1,0 +1,7 @@
+.toast-module-opacity {
+  opacity: 1 !important;
+}
+
+#toast-container > mdb-toast-component.toast-module-opacity, #toast-container > mdb-toast-component.toast-module-opacity > div {
+  opacity: 1 !important;
+}

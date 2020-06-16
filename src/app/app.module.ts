@@ -56,6 +56,8 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
 import { StickyNavModule } from 'ng2-sticky-nav';
+import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+
 
 @NgModule({
   declarations: [
@@ -102,9 +104,10 @@ import { StickyNavModule } from 'ng2-sticky-nav';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    StickyNavModule
+    StickyNavModule,
+    AngularToastifyModule
   ],
-  providers: [ProjectService, Location],
+  providers: [ProjectService, ToastService, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

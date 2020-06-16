@@ -3,6 +3,7 @@ import { ProjectService } from 'src/app/project.service';
 import { NgForm } from '@angular/forms';
 import { Project } from 'src/app/new-project/project.model';
 import { Subscription } from 'rxjs';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-admin-projects-new',
@@ -13,7 +14,7 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
   private errorSub: Subscription;
   error: String;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private _toastService: ToastService) { }
 
   ngOnInit(): void {
     this.errorSub = this.projectService.error.subscribe(errorMessage => {
@@ -32,7 +33,9 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
       formValue.support,
       formValue.additional
       );
-      this.projectService.uploadProject(newProject);    
+      // this.projectService.uploadProject(newProject);    
+      this._toastService.success('message');
+      form.reset();
   }
 
   ngOnDestroy(): void {
