@@ -24,7 +24,6 @@ export class NewProjectComponent implements OnInit {
   onAddNewProject(form: NgForm) {
     const formValue = form.value;
     const newProject = new Project(
-      this.projectService.getProjects().length+1,
       formValue.name, 
       formValue.phone,
       formValue.email,
@@ -33,7 +32,7 @@ export class NewProjectComponent implements OnInit {
       formValue.support,
       formValue.additional
       );
-      // this.projectService.uploadProject(newProject);
+      this.projectService.uploadProject(newProject);
       this.modalService.showModal({title: "Projekt esitatud!", 
       description: "Aitäh, et toetad Tallinna Ülikooli tudengeid! Anname tagasisidet niipea, kui võimalik. Pane tähele, et projekt saab valmis alles juunikuu lõpus."
       });

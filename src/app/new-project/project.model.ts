@@ -1,5 +1,4 @@
 export class Project {
-    public id: number;
     public contactName: string;
     public contactPhone: string;
     public contactEmail: string;
@@ -13,7 +12,6 @@ export class Project {
     public firebaseId?: string;
 
     constructor(
-        id: number,
         recipient_name: string, 
         recipient_phone: string, 
         recipient_email: string,
@@ -21,7 +19,6 @@ export class Project {
         description: string,
         additional: string,
         support: string){
-            this.id = id;
             this.contactName = recipient_name;
             this.contactPhone = recipient_phone;
             this.contactEmail = recipient_email;

@@ -1,12 +1,11 @@
-<br><br>
-<div class="header">Kõik saadavalolevad projektid aastal {{ year }}: </div>
+<div class="text-center-header">Kõik saadavalolevad projektid aastal {{ year }}: </div>
 <br>
 <div class="rectangle"></div>
 <br>
 <div class="row">
     <div class="col-xs-12">
         <ng-container *ngFor="let project of projects">
-            <div class="list-group-item clearfix" *ngIf="!project.visible" [ngClass]="{ selected: selectedProject == project}">
+            <div class="list-group-item clearfix" *ngIf="!project.visible">
                 <div>
                     <label>
                         <div class="list-group-item-heading">

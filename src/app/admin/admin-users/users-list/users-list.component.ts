@@ -13,10 +13,4 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  onNewUser() {
-    console.log("hi");
-    this.router.navigate(['new'], { relativeTo: this.route });
-  }
-  
 }

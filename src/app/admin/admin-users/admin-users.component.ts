@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminUsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  onNewUser() {
+    this.router.navigate(['new'], { relativeTo: this.route });
+  }
+
+  onUsersList() {
+    this.router.navigate(['list'], { relativeTo: this.route });
   }
 
 }

@@ -2,7 +2,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NewUserComponent } from './admin/admin-users/new-user/new-user.component';
 import { UsersListComponent } from './admin/admin-users/users-list/users-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DataStorageService } from './database/data-storage.service';
 import { ProjectService } from './project.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -97,7 +96,7 @@ import { SuccessModalComponent } from './shared/success-modal/success-modal.comp
     MatDialogModule
     
   ],
-  providers: [ProjectService, DataStorageService, Location],
+  providers: [ProjectService, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
