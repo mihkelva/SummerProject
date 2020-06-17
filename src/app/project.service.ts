@@ -28,11 +28,21 @@ export class ProjectService {
     //     this.projectsChanged.next(this.projects.slice());
     // }
 
+    updateProject(index: string, updatedProject: Project) {
+        this.http.patch('https://summerproject-d48ac.firebaseio.com/projects.json', updatedProject)
+        // this.projects[index] = updatedProject;
+        // this.projectsChanged.next(this.projects.slice());
+    }
+
     getProjects() {
+      
       return this.projects.slice();
     }
 
     getProject(index: string) {
+        console.log(this.projects);
+        this.fetchProjects();
+        console.log(this.projects);
         return this.projects.find(project => project.firebaseId === index);
     }
 

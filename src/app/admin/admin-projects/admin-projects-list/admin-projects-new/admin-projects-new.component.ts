@@ -33,8 +33,8 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
       formValue.support,
       formValue.additional
       );
-      // this.projectService.uploadProject(newProject);    
-      this._toastService.success('message');
+      this.projectService.uploadProject(newProject);    
+      this._toastService.success('Projekt edukalt lisatud');
       form.reset();
   }
 

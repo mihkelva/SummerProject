@@ -1,0 +1,16 @@
+/* .notDeleted {
+  border: solid 2px red;
+} */
+
+.notDeleted {
+  border: solid 2px #75b6ab;
+}
+
+.list-group-item-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

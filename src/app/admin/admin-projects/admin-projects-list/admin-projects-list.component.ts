@@ -48,9 +48,6 @@ export class AdminProjectsListComponent implements OnInit, OnDestroy {
     });
   }
 
-  onChangeProject(project) {
-  }
-
   onDeleteComment(project, index: number) {
     this.projects.forEach(pr => {
       if (pr == project) {

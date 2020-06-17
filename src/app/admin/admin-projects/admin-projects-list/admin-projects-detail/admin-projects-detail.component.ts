@@ -10,8 +10,10 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
   styleUrls: ['./admin-projects-detail.component.css']
 })
 export class AdminProjectsDetailComponent implements OnInit {
+  projects: Project[];
   project: Project;
   id: string;
+  error: string;
 
   editMode = false;
   projectForm: FormGroup;
@@ -25,11 +27,18 @@ export class AdminProjectsDetailComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = params['id'];
-          this.project = this.projectService.getProject(this.id);
+          // this.project = this.projectService.getProject(this.id);
           this.editMode = params['id'] != null;
-          this.initForm();
+          
         }
     )
+    this.projectService.fetchProjects().subscribe(projects => {
+      this.projects = projects;
+      this.project = this.projects.find(project => project.firebaseId === this.id);
+      this.initForm();
+    }, error => {
+      this.error = error;
+    });
   }
 
   initForm() {
@@ -63,8 +72,8 @@ export class AdminProjectsDetailComponent implements OnInit {
 
   onSubmit() {
     this.projectForm.value.id = this.id;
-    // this.projectService.updateProject(this.id, this.projectForm.value);
-    this.router.navigate(['..'], {relativeTo: this.route});
+    this.projectService.updateProject(this.id, this.projectForm.value);
+    this.router.navigate(['/admin/projects'], {relativeTo: this.route});
   }
 
 }
