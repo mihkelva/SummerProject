@@ -14,7 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { DOCUMENT } from '@angular/common';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -33,6 +33,7 @@ library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WorkDoneComponent } from './work-done/work-done.component';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
@@ -85,7 +86,8 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     UsersListComponent,
     NewUserComponent,
     LoadingSpinnerComponent,
-    SuccessModalComponent
+    SuccessModalComponent,
+    ScrollTopComponent
   ],
   imports: [
     GalleryModule.forRoot(),

@@ -82,6 +82,7 @@ textarea.ng-invalid.ng-touched {
     align-items: center;
     border-radius: 10px;
     background-repeat: no-repeat;
+    background-image: url(http://ran.ge/content/uploads/2009/11/logo-trimmed.png);
 }
 
 .mat-divider {
@@ -121,16 +122,4 @@ textarea.ng-invalid.ng-touched {
 .text-center {
     font-size: 5rem;
     text-align: center;
-}
-
-.text-center-header {
-    font-size: 5rem;
-    text-align: center;
-    margin-top: 50px;
-    line-height: 1;
-    font-weight: 500;
-}
-
-.bg-dti {
-    background-color: #6bcaba !important;
 }
