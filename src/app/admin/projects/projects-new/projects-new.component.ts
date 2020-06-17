@@ -7,10 +7,10 @@ import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-admin-projects-new',
-  templateUrl: './admin-projects-new.component.html',
-  styleUrls: ['./admin-projects-new.component.css']
+  templateUrl: './projects-new.component.html',
+  styleUrls: ['./projects-new.component.css']
 })
-export class AdminProjectsNewComponent implements OnInit, OnDestroy {
+export class ProjectsNewComponent implements OnInit, OnDestroy {
   private errorSub: Subscription;
   error: String;
 
@@ -25,7 +25,7 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
   onAddNewProject(form: NgForm) {
     const formValue = form.value;
     const newProject = new Project(
-      formValue.name, 
+      formValue.name,
       formValue.phone,
       formValue.email,
       formValue.project_name,
@@ -33,7 +33,7 @@ export class AdminProjectsNewComponent implements OnInit, OnDestroy {
       formValue.support,
       formValue.additional
       );
-      this.projectService.uploadProject(newProject);    
+      this.projectService.uploadProject(newProject);
       this._toastService.success('Projekt edukalt lisatud');
       form.reset();
   }

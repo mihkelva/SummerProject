@@ -1,4 +1,5 @@
 export class Project {
+    public insertedDate: Date;
     public contactName: string;
     public contactPhone: string;
     public contactEmail: string;
@@ -9,6 +10,12 @@ export class Project {
     public deleted: boolean;
     public visible: boolean;
     public comments: string[];
+    public students: string[];
+    public github: string;
+    public blog: string;
+    public url: string;
+    public overviewer: string;
+    public date: Date;
     public firebaseId?: string;
 
     constructor(

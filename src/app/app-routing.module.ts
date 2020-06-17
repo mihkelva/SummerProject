@@ -7,12 +7,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'
 import { AdminComponent } from './admin/admin.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
-import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
-import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
-import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-new/admin-projects-new.component';
+import { ProjectsListComponent } from './admin/projects/projects-list/projects-list.component';
+import { ProjectsDetailComponent } from './admin/projects/projects-list/projects-detail/projects-detail.component';
+import { ProjectsNewComponent } from './admin/projects/projects-new/projects-new.component';
 import { FaqAddComponent } from './admin/faq-add/faq-add.component';
-import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
-import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
+import { PreviousProjectsComponent } from './admin/projects/previous-projects/previous-projects.component';
+import { ProjectsViewComponent } from './admin/projects/projects-list/projects-view/projects-view.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 
@@ -22,10 +22,10 @@ const appRoutes: Routes = [
     {path: 'user', component: UserComponent},
     {path: 'user/projects', component: UserProjectsComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'admin/projects', component: AdminProjectsListComponent, canActivate: [AuthGuard] },
-    {path: 'admin/projects/new', component: AdminProjectsNewComponent, canActivate: [AuthGuard] },
-    {path: 'admin/projects/edit/:id', component: AdminProjectsDetailComponent, canActivate: [AuthGuard] },
-    {path: 'admin/projects/view/:id', component: AdminProjectsViewComponent, canActivate: [AuthGuard] },
+    {path: 'admin/projects', component: ProjectsListComponent, canActivate: [AuthGuard] },
+    {path: 'admin/projects/new', component: ProjectsNewComponent, canActivate: [AuthGuard] },
+    {path: 'admin/projects/edit/:id', component: ProjectsDetailComponent, canActivate: [AuthGuard] },
+    {path: 'admin/projects/view/:id', component: ProjectsViewComponent, canActivate: [AuthGuard] },
     {path: 'admin/faq', component: FaqAddComponent, canActivate: [AuthGuard] },
     {path: 'admin/previous', component: PreviousProjectsComponent, canActivate: [AuthGuard] },
     {path: 'admin/users', component: AdminUsersComponent, canActivate: [AuthGuard] },

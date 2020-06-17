@@ -39,24 +39,24 @@ import { ProjectFormComponent } from './project-form/project-form.component';
 import { AdminComponent } from './admin/admin.component';
 import { MenuComponent } from './menu/menu.component';
 import { NewProjectComponent } from './new-project/new-project.component';
-import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.component';
+import { ProjectsComponent } from './admin/projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { UserProjectsComponent } from './user/user-projects/user-projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminProjectsListComponent } from './admin/admin-projects/admin-projects-list/admin-projects-list.component';
-import { AdminProjectsDetailComponent } from './admin/admin-projects/admin-projects-list/admin-projects-detail/admin-projects-detail.component';
-import { AdminProjectsViewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-view/admin-projects-view.component';
+import { ProjectsListComponent } from './admin/projects/projects-list/projects-list.component';
+import { ProjectsDetailComponent } from './admin/projects/projects-list/projects-detail/projects-detail.component';
+import { ProjectsViewComponent } from './admin/projects/projects-list/projects-view/projects-view.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FaqAddComponent } from './admin/faq-add/faq-add.component';
-import { PreviousProjectsComponent } from './admin/previous-projects/previous-projects.component';
-import { AdminProjectsNewComponent } from './admin/admin-projects/admin-projects-list/admin-projects-new/admin-projects-new.component';
+import { PreviousProjectsComponent } from './admin/projects/previous-projects/previous-projects.component';
+import { ProjectsNewComponent } from './admin/projects/projects-new/projects-new.component';
 import { AuthComponent } from './auth/auth.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
 import { StickyNavModule } from 'ng2-sticky-nav';
-import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 
 
 @NgModule({
@@ -70,16 +70,16 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     AdminComponent,
     MenuComponent,
     NewProjectComponent,
-    AdminProjectsComponent,
+    ProjectsComponent,
     FooterComponent,
     UserComponent,
     UserProjectsComponent,
-    AdminProjectsListComponent,
-    AdminProjectsDetailComponent,
-    AdminProjectsViewComponent,
+    ProjectsListComponent,
+    ProjectsDetailComponent,
+    ProjectsViewComponent,
     FaqAddComponent,
     PreviousProjectsComponent,
-    AdminProjectsNewComponent,
+    ProjectsNewComponent,
     AuthComponent,
     AdminUsersComponent,
     UsersListComponent,
