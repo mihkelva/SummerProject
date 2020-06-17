@@ -56,7 +56,9 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
 import { StickyNavModule } from 'ng2-sticky-nav';
-import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component'; 
+
 
 
 @NgModule({
@@ -85,7 +87,8 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     UsersListComponent,
     NewUserComponent,
     LoadingSpinnerComponent,
-    SuccessModalComponent
+    SuccessModalComponent,
+    ScrollTopComponent
   ],
   imports: [
     GalleryModule.forRoot(),
