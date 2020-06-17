@@ -14,7 +14,7 @@
 <div class="rectangle"></div>
 <br><br>
 
-<form (ngSubmit)="onAddNewProject(newProjectForm)" #newProjectForm="ngForm">
+<form (ngSubmit)="onAddNewProject(newProjectForm)" #newProjectForm="ngForm" class="newProject">
     <div class="form-group half">
         <label>Projekti nimi: <span class="requiredRed">*</span></label>
         <input ngModel name="project_name" type="text" class="form-control" id="project_name" required>

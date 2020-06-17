@@ -57,7 +57,7 @@
                             <button class="btn btn-dti" [routerLink]="['view',project.firebaseId]">Vaata projekti seisu</button>
                         </ng-template >
                         <div *ngFor="let comment of project.comments; let i = index" class="extraQuestion">
-                            {{ comment }} <p></p> <button (click)="onDeleteComment(project, i)">X</button>
+                            <button (click)="onDeleteComment(project, i) " class=closeButton>x</button> {{ comment }}
                         </div>
                         <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
                             <div *ngIf="project.commentButtonActive" class="extraQuestion">

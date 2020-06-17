@@ -1,3 +1,8 @@
+.newProject {
+    min-width: 45vw;
+
+}
+
 .toast-module-opacity {
   opacity: 1 !important;
 }
