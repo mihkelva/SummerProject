@@ -35,21 +35,17 @@ export class ProjectService {
     }
 
     getProjects() {
-      
       return this.projects.slice();
     }
 
     getProject(index: string) {
-        console.log(this.projects);
         this.fetchProjects();
-        console.log(this.projects);
         return this.projects.find(project => project.firebaseId === index);
     }
 
     uploadProject(newProject: Project) {
         this.http.post('https://summerproject-a6747.firebaseio.com/projects.json', newProject).subscribe(
         responseData => {
-          console.log(responseData);
         }),
         error => {
             this.error.next(error.message);

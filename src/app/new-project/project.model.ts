@@ -10,12 +10,12 @@ export class Project {
     public deleted: boolean;
     public visible: boolean;
     public comments: string[];
-    public students: string[];
+    public students: {name: string, suund:string}[];
     public github: string;
     public blog: string;
     public url: string;
     public overviewer: string;
-    public date: Date;
+    public year: number;
     public firebaseId?: string;
 
     constructor(
@@ -26,6 +26,7 @@ export class Project {
         description: string,
         additional: string,
         support: string){
+            this.insertedDate = new Date();
             this.contactName = recipient_name;
             this.contactPhone = recipient_phone;
             this.contactEmail = recipient_email;
