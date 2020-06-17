@@ -337,3 +337,7 @@
 .navbar-dark .navbar-text a:focus {
     color: #fff;
 }
+
+.bg-dti {
+    background-color: #6bcaba;
+}

@@ -1,12 +1,5 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
 
-
-@Component({
-  selector: 'app-scroll-top',
-  templateUrl: './scroll-top.component.html',
-  styleUrls: ['./scroll-top.component.css']
-})
-
 @Component({
     selector: 'app-scroll-top',
     templateUrl: './scroll-top.component.html',
