@@ -33,7 +33,10 @@ export class MenuComponent implements OnInit {
            if(routerData.url === '/admin/projects' ||
               routerData.url === '/admin/projects/new' ||
               routerData.url === '/admin/previous' ||
-              routerData.url === '/admin/projects/view/0') {
+              routerData.url === '/admin/projects/view/0' ||
+              routerData.url === '/admin/projects/edit/0' ||
+              routerData.url === '/admin/projects/view/1' ||
+              routerData.url === '/admin/projects/edit/1') {
             this.isAdminMenu=true;
            } else {
             this.isAdminMenu=false;
@@ -42,9 +45,13 @@ export class MenuComponent implements OnInit {
               routerData.url !== '/admin/projects/new' &&
               routerData.url !== '/admin/previous' &&
               routerData.url !== '/admin/projects/view/0' &&
+              routerData.url !== '/admin/projects/edit/0' &&
+              routerData.url !== '/admin/projects/view/1' &&
+              routerData.url !== '/admin/projects/edit/1' &&
               routerData.url !== '/new' && 
               routerData.url !== '/admin' && 
-              routerData.url !== '/user') {
+              routerData.url !== '/user' &&
+              routerData.url !== '/user/projects') {
             this.isHomeMenu=true;
            } else {
             this.isHomeMenu=false;

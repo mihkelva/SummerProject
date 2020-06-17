@@ -17,8 +17,35 @@
                     </label>
                 </div>
                 <div class="registrations">
-                    <button class="btn btn-dti">Registreeru projekti</button><span>Registreerunuid: 0/5</span>
+                    <button class="btn btn-dti" (click)="showCommentInfo(project)">Lisa projekti info</button>
+                    <button class="btn btn-dti" (click)="showRegisterButton(project)">Registreeru projekti</button><span>Registreerunuid: {{ project.students.length }}  /5</span>
                 </div>
+                <form (ngSubmit)="onSubmitInfo(project, infoForm)" #infoForm="ngForm">
+                    <div *ngIf="project.addInfoButtonActive">
+                        Githubi link: <input type="text" class="form-control" ngModel name="github">
+                        <br>
+                        Blogi link: <input type="text" class="form-control" ngModel name="blog">
+                        <br>
+                        URL link: <input type="text" class="form-control" ngModel name="url">
+                        <br>
+                        <button class="btn btn-dti">Sisesta</button>
+                    </div>
+                </form>
+                <form (ngSubmit)="onSubmitRegistration(project, registrationForm)" #registrationForm="ngForm">
+                    <div *ngIf="project.registrationButtonActive">
+                        Ees- ja perekonnanimi: <input type="text" class="form-control" ngModel name="github">
+                        <br>
+                        Õppesuund:
+                        <mat-form-field>
+                            <mat-label class="matLabel">Vali suund</mat-label>
+                            <mat-select matInput name="mySelect" class="matSelect">
+                              <mat-option *ngFor="let suund of suunds" [value]="project.name" class="matOption">{{suund}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        <br>
+                        <button class="btn btn-dti">Registreeru</button>
+                    </div>
+                </form>
             </div>
         </ng-container>
     </div>
