@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
     selector: 'app-scroll-top',
@@ -7,7 +8,7 @@ import { Component, OnInit, HostListener, Inject } from '@angular/core';
 })
 export class ScrollTopComponent implements OnInit {
     windowScrolled: boolean;
-    constructor(@Inject(Document) private document: Document) {}
+    constructor(@Inject(DOCUMENT) private document: Document) {}
     @HostListener("window:scroll", [])
     onWindowScroll() {
         if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
