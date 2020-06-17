@@ -1,10 +1,6 @@
 <div *ngIf="projects.length > 0 && !isFetching">
-
-    <br><br>
-
     <div class="text-center-header">Kõik seni esitatud projektid: </div>
     <br>
-
     <div class="row">
         <div class="col-xs-12">
             <ng-container *ngFor="let project of projects" >
@@ -50,7 +46,6 @@
                             <button class="btn btn-dti" (click)="showCommentAdd(project)">Pane kirja kommentaar</button>
                             <button 
                                 class="btn btn-dti" 
-                                (click)="onChangeProject(project)" 
                                 [routerLink]="['edit',project.firebaseId]">Muuda projekti (ka andmebaasis!)</button>
                         </div>
                         <ng-template #projectVisible>

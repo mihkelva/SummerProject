@@ -1,1 +1,35 @@
-<p>previous-projects works!</p>
+<div *ngIf="projects.length > 0 && !isFetching">
+  <div class="text-center-header">Kõik projektid andmebaasis: </div>
+  <br>
+  <div class="row">
+      <div class="col-xs-12">
+          <ng-container *ngFor="let project of projects" >
+              <div
+                  class="list-group-item clearfix" 
+                  [ngClass]="[project.deleted ? 'isDeleted' : 'notDeleted']">
+                  <div>
+                      <label>
+                          <input
+                              [(ngModel)]="project.deleted"
+                              type="checkbox">
+                          <div class="list-group-item-header">
+                              <div class="list-group-item-date">
+                                  Esitatud: 12.06.2020
+                              </div>
+                              <div class="list-group-item-heading">
+                                  Projekti nimi: <b> {{ project.name }} </b>
+                              </div>
+                          </div>
+                      </label>
+                  </div>
+              </div>
+          </ng-container>
+      </div>
+  </div>
+
+</div>
+<div *ngIf="projects.length<1 && !isFetching && !error">
+  <div class="text-center-header">Ühtegi projekti pole</div>
+  </div>
+<div *ngIf="isFetching && !error" class="text-center-header" style="text-align: center;">  <app-loading-spinner></app-loading-spinner></div>
+<div *ngIf="error" class="alert alert-danger">Tuli error: <br><br> {{error.message}}</div>
