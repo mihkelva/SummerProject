@@ -5,17 +5,17 @@ import { Project } from 'src/app/new-project/project.model';
 
 @Component({
   selector: 'app-admin-projects-view',
-  templateUrl: './admin-projects-view.component.html',
-  styleUrls: ['./admin-projects-view.component.css']
+  templateUrl: './projects-view.component.html',
+  styleUrls: ['./projects-view.component.css']
 })
-export class AdminProjectsViewComponent implements OnInit {
+export class ProjectsViewComponent implements OnInit {
   project: Project;
   id: string;
 
   editMode = false;
 
   constructor(private projectService: ProjectService,
-              private route: ActivatedRoute, 
+              private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {

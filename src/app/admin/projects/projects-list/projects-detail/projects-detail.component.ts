@@ -6,10 +6,10 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-projects-detail',
-  templateUrl: './admin-projects-detail.component.html',
-  styleUrls: ['./admin-projects-detail.component.css']
+  templateUrl: './projects-detail.component.html',
+  styleUrls: ['./projects-detail.component.css']
 })
-export class AdminProjectsDetailComponent implements OnInit {
+export class ProjectsDetailComponent implements OnInit {
   projects: Project[];
   project: Project;
   id: string;
@@ -19,7 +19,7 @@ export class AdminProjectsDetailComponent implements OnInit {
   projectForm: FormGroup;
 
   constructor(private projectService: ProjectService,
-              private route: ActivatedRoute, 
+              private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class AdminProjectsDetailComponent implements OnInit {
           this.id = params['id'];
           // this.project = this.projectService.getProject(this.id);
           this.editMode = params['id'] != null;
-          
+
         }
     )
     this.projectService.fetchProjects().subscribe(projects => {
@@ -67,6 +67,7 @@ export class AdminProjectsDetailComponent implements OnInit {
       description: new FormControl(projectDescription, Validators.required),
       support: new FormControl(support),
       additional: new FormControl(additional),
+      overviewer: new FormControl()
     })
   }
 

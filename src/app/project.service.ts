@@ -29,7 +29,7 @@ export class ProjectService {
     // }
 
     updateProject(index: string, updatedProject: Project) {
-        this.http.patch('https://summerproject-d48ac.firebaseio.com/projects.json', updatedProject)
+        this.http.patch('https://summerproject-a6747.firebaseio.com/projects.json', updatedProject)
         // this.projects[index] = updatedProject;
         // this.projectsChanged.next(this.projects.slice());
     }
@@ -47,7 +47,7 @@ export class ProjectService {
     }
 
     uploadProject(newProject: Project) {
-        this.http.post('https://summerproject-d48ac.firebaseio.com/projects.json', newProject).subscribe(
+        this.http.post('https://summerproject-a6747.firebaseio.com/projects.json', newProject).subscribe(
         responseData => {
           console.log(responseData);
         }),
@@ -58,7 +58,7 @@ export class ProjectService {
     }
 
     fetchProjects() {
-        return this.http.get<{ [key: string]: Project }>('https://summerproject-d48ac.firebaseio.com/projects.json')
+        return this.http.get<{ [key: string]: Project }>('https://summerproject-a6747.firebaseio.com/projects.json')
             // .pipe((map(projects => {
             //     return projects.map(project => {
             //         return {...project, comments: project.comments ? project.comments : []}
@@ -78,7 +78,7 @@ export class ProjectService {
 
     saveProjects(projects) {
       this.http.put(
-          'https://summerproject-d48ac.firebaseio.com/projects.json',
+          'https://summerproject-a6747.firebaseio.com/projects.json',
           projects)
       .subscribe(response => {
           console.log(response);

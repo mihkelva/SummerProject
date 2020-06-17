@@ -7,10 +7,10 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-projects-list',
-  templateUrl: './admin-projects-list.component.html',
-  styleUrls: ['./admin-projects-list.component.css']
+  templateUrl: './projects-list.component.html',
+  styleUrls: ['./projects-list.component.css']
 })
-export class AdminProjectsListComponent implements OnInit, OnDestroy {
+export class ProjectsListComponent implements OnInit, OnDestroy {
   projects: Project[] = [];
   questionNeeded = false;
   isFetching = false;
