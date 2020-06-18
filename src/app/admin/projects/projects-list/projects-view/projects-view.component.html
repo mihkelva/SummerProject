@@ -1,56 +1,56 @@
-<a routerLink="../..">< Tagasi</a>
+<br><a routerLink="../.." class="backButton">< Tagasi</a>
 
 <div class="text-center-header">Vaatad projekti: </div>
 <div class="header-project-name"> {{project.name}} </div>
 <div class="row">
   <div class="col-xs-12">
     <div class="list-group-item clearfix" >
-      <div>Projektis osalevad inimesed: 
+      <div class="plainText"> <div class="textBigger">Projektis osalevad inimesed:</div> 
         <span *ngFor="let student of project.students; let i = index"><br>
           <span *ngIf="project.students.length > 0">
             <button (click)="onDeleteStudent(project, i)" class=closeButton>x</button>
-            {{ student.name }}
+            <b>{{ student.name }}</b>
           </span>
         </span>
         <span *ngIf="!project.students">
-          <span><i>Üliõpilasi pole veel registreerunud</i></span>
+          <br> <span><i>Üliõpilasi pole veel registreerunud</i></span>
         </span>
-      </div>
-      <div>
+      </div> <hr>
+      <div class="plainText">
         Projekti Github link:
         <span *ngIf="project.github">
           <button (click)="onDeleteGithub(project)" class=closeButton>x</button> 
-          {{project.github}} 
+          <b>{{project.github}}</b>
         </span>
         <span *ngIf="!project.github">
           <span><i>Githubi linki pole sisestatud</i></span>
         </span>
       </div>
-      <div>
+      <div class="plainText">
         Projekti blogi aadress: 
         <span *ngIf="project.blog">
           <button (click)="onDeleteBlog(project)" class=closeButton>x</button> 
-          {{project.blog}} 
+          <b>{{project.blog}} </b>
         </span>
         <span *ngIf="!project.blog">
           <span><i>Blogi linki pole sisestatud</i></span>
         </span>
       </div>
-      <div>
+      <div class="plainText">
         Projekti enda URL aadress: 
         <span *ngIf="project.url">
           <button (click)="onDeleteURL(project)" class=closeButton>x</button> 
-          {{project.url}} 
+          <b>{{project.url}}</b>
         </span>
         <span *ngIf="!project.url">
           <span><i>Projekti URL linki pole sisestatud</i></span>
         </span>
       </div>
-      <div>
+      <div class="plainText">
         Projekti ülevaataja: 
         <span *ngIf="project.overviewer">
           <button (click)="onDeleteReviewer(project)" class=closeButton>x</button> 
-          {{project.overviewer}} 
+          <b>{{project.overviewer}}</b>
         </span>
         <span *ngIf="!project.overviewer">
           <span><i>Projekti ülevaatajat pole sisestatud</i></span>
