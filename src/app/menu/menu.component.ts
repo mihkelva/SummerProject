@@ -60,13 +60,6 @@ export class MenuComponent implements OnInit {
     })
   }
 
-  
-
-  scroll(el: HTMLElement) {
-    console.log(el);
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }
-
   onLogout() {
     this.authService.logout();
   }

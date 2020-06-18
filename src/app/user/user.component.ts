@@ -18,7 +18,6 @@ export class UserComponent implements OnInit {
   }
 
   onLogin(loginForm: NgForm) {
-    console.log(loginForm.value)
     this.router.navigate(["projects"], { relativeTo: this.route })
   }
 

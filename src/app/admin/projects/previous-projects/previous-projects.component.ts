@@ -27,33 +27,12 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
     });
   }
 
+  saveOnClick(project: Project) {
+    project.deleted = !project.deleted;
+    this.projectService.updateProject(project.firebaseId, project);
+  }
+
   ngOnDestroy(): void {
     this.projectService.saveProjects(this.projects);
   }
-
-
-  showCommentAdd(project) {
-    project.commentButtonActive = !project.commentButtonActive;
-  }
-
-  onAddQuestion(project, form: NgForm) {
-    const itemQuestion = form.value.itemQuestion;
-    this.projects.forEach(pr => {
-      if (pr == project) {
-        pr.comments.push(itemQuestion);
-      }
-    });
-  }
-
-  onChangeProject(project) {
-  }
-
-  onDeleteComment(project, index: number) {
-    this.projects.forEach(pr => {
-      if (pr == project) {
-        pr.comments.splice(index, 1);
-      }
-    });
-  }
-
 }

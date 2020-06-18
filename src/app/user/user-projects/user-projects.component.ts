@@ -30,7 +30,6 @@ export class UserProjectsComponent implements OnInit {
         addInfoButtonActive: false, 
         registrationButtonActive: false, 
         students: prj.students ? prj.students : [] }));
-      console.log(this.projects);
     }, error => {
       this.error = error;
     });
@@ -39,13 +38,11 @@ export class UserProjectsComponent implements OnInit {
   showCommentInfo(project) {
     project.registrationButtonActive = false;
     project.addInfoButtonActive = !project.addInfoButtonActive;
-    console.log(project);
   }
 
   showRegisterButton(project) {
     project.addInfoButtonActive = false;
     project.registrationButtonActive = !project.registrationButtonActive;
-    console.log(project);
   }
 
   onSubmitInfo(project: Project, form: NgForm) {
@@ -65,7 +62,8 @@ export class UserProjectsComponent implements OnInit {
     }
     if (changed) {
       this._toastService.success('Info edukalt uuendatud! Info kustutamiseks ja uuesti sisestamiseks pöördu õppejõu poole.');
-    } {
+      this.projectService.updateProject(project.firebaseId, project);
+    } else {
       this._toastService.error('Palun sisesta valitud lingid.');
     }
     form.reset();
@@ -93,7 +91,7 @@ export class UserProjectsComponent implements OnInit {
       form.reset();
       // for form year in archive
       project.year = this.year;
-      
+      this.projectService.updateProject(project.firebaseId, project);
     }
   }
   

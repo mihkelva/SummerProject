@@ -32,10 +32,8 @@ export class NewUserComponent implements OnInit {
     let authObs: Observable<AuthResponseData>;
     authObs = this.authService.signUp(signupForm.value.username, signupForm.value.password);
     authObs.subscribe(resData => {
-        console.log(resData);
         this.isLoading = false;
     }, error => {
-      console.log(error);
       this.error = error;
       this.isLoading = false;
     });

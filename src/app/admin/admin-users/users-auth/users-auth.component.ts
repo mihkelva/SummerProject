@@ -14,7 +14,7 @@ export class UsersAuthComponent implements OnInit {
   }
 
   onSubmit(authForm) {
-    console.log(authForm);
+    
   }
 
 }
