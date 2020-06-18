@@ -1,9 +1,16 @@
 <div *ngIf="projects.length > 0 && !isFetching">
   <div class="text-center-header">Kõik projektid andmebaasis: </div>
   <br>
+  <mat-form-field>
+    <mat-label class="matLabel">Vali projekti aasta</mat-label>
+    <mat-select matInput class="matSelect" [(ngModel)]="chosenYear">
+      <mat-option *ngFor="let project of projects | unique" [value]="project.year" class="matOption">{{project.year}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
   <div class="row">
       <div class="col-xs-12">
-          <ng-container *ngFor="let project of projects">
+          <ng-container *ngFor="let project of projects | filterByYear:chosenYear">
               <label
                   (change)="saveOnClick(project)"
                   class="list-group-item clearfix" 
@@ -12,14 +19,21 @@
                               type="checkbox">
                           <div class="list-group-item-header">
                               <div class="list-group-item-date">
-                                  Projekti aasta: {{ project.year }}
+                                  Projekti aasta: 
+                                  <span *ngIf="project.year != 'Pole alustatud'"> {{ project.year }} </span>
+                                  <span *ngIf="project.year == 'Pole alustatud'"> <i>{{ project.year }} </i></span>
                               </div>
                               <div class="list-group-item-name">
                                   Projekti nimi: <b> {{ project.name }} </b>
                               </div>
                               <div class="list-group-item-users">
                                 Projekti tegijad: <b> 
-                                    <span *ngFor="let student of project.students">{{ student.name }}, </span></b>
+                                    <span *ngFor="let student of project.students; let i = index">
+                                        {{ student.name }} {{i === project.students.length -1 ? '' : ',&nbsp;' }}
+                                    </span></b>
+                                    <span *ngIf="!project.students && project.year == 'Pole alustatud'">
+                                       <i>Keegi pole registreerunud</i> 
+                                    </span>
                             </div>
                           </div>
                 </label>

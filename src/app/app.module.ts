@@ -59,6 +59,7 @@ import { SuccessModalComponent } from './shared/success-modal/success-modal.comp
 import { StickyNavModule } from 'ng2-sticky-nav';
 import { ToastService, AngularToastifyModule } from 'angular-toastify';
 import { FilterByYearPipe } from './admin/projects/previous-projects/filter-by-year.pipe';
+import { UniquePipe } from './admin/projects/previous-projects/unique.pipe';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { FilterByYearPipe } from './admin/projects/previous-projects/filter-by-y
     SuccessModalComponent,
     ScrollTopComponent,
     FilterByYearPipe,
+    UniquePipe,
   ],
   imports: [
     GalleryModule.forRoot(),

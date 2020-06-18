@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Project } from 'src/app/new-project/project.model';
 import { ProjectService } from 'src/app/project.service';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-previous-projects',
@@ -12,6 +11,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [];
   isFetching = false;
   error = null;
+  chosenYear: string;
 
   constructor(private projectService: ProjectService) { }
 
@@ -20,7 +20,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
     this.projectService.fetchProjects().subscribe(projects => {
       this.isFetching = false;
       let allProjects = projects;
-      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : prj.insertedDate.getFullYear()}));
+      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : 'Pole alustatud'}));
     }, error => {
       this.isFetching = false;
       this.error = error;
@@ -30,6 +30,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
   saveOnClick(project: Project) {
     project.deleted = !project.deleted;
     this.projectService.updateProject(project.firebaseId, project);
+    console.log(this.chosenYear);
   }
 
   ngOnDestroy(): void {
