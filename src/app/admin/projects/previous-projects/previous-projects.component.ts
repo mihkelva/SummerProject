@@ -20,7 +20,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
     this.projectService.fetchProjects().subscribe(projects => {
       this.isFetching = false;
       let allProjects = projects;
-      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : prj.insertedDate.getFullYear()}));
+      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : 2020}));
     }, error => {
       this.isFetching = false;
       this.error = error;

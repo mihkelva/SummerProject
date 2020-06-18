@@ -62,5 +62,6 @@ export class ProjectService {
           projects)
       .subscribe(response => {
       });
+      this.projects = projects;
     }
 }
