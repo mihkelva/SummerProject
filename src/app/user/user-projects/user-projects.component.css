@@ -79,3 +79,18 @@ input[type="radio"] {
   transition: transform 0.3s;
   transform: scale(1.02);
 }
+
+.forms {
+  padding-top:10px;
+  min-width: 29vw;
+}
+
+ngg-deep .mat-select-value {
+  display: table-cell !important;
+  max-width: 0 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  padding-top: 10px !important;
+}
