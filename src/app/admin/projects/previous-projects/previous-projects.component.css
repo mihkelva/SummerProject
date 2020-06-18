@@ -7,8 +7,11 @@
 }
 
 .list-group-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  width: 33vw;
+  margin-left: 33.33%;
 }
 
 input[type="checkbox"] {
