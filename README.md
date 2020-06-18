@@ -13,59 +13,35 @@ Projekti koostasid:
 
 # SummerProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+Projekt on koostatud Angulari versioon 9.1.6 abil ja kasutatud on Firebase andmebaasi (database), serverit (hosting) ja autentikeerimist (authentication).
 
-## Development server
+## Kasutatud tehnoloogiad
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Angular versioon 9.1.6
+2. Firebase (firebase.google.com)
+3. NodeJS 12.18.1
 
-----------------------------------------------------------------------------------------------------------------
+Angulari teegid:
+1. @ks89 hammerjs mousetrap - karusell-galerii jaoks
+2. animations material cdk - FAQ jaoks
+3. @nicky-lenaers g2-sticky-nav - menüü kerimise jaoks
 
-### Karusell-galerii
-Requires:
-```
-Angular (version 5 or higher)
-rxjs-compat if using Angular >=6
-rxjs 5.0.0 or higher
-```
+## Kasutamine veebis
 
-``````
-npm install rxjs-compat
-npm install rxjs
-npm install --save @ks89/angular-modal-gallery
-npm install --save hammerjs mousetrap @angular/cdk
-npm install --save-dev @types/mousetrap @types/hammerjs
-npm i angular-modal-gallery
-``````
-### FAQ
-Requires:
-`````
-angular flex-layout v7.x
-angular material v7.x
-angular cdk v7.x
-angular animations v7.x
-angular forms v7.x
-`````
-`````
-npm i @angular/cdk @angular/material @angular/flex-layout @angular/animations @angular/forms
-npm i -s material-design-icons
-ng add @angular/material
-npm i -s material-design-icons
-npm install -s @angular-material-extensions/faq
-`````
-### MENU
-Requires:
-`````
-npm install @nicky-lenaers/ngx-scroll-to
-npm install ng2-sticky-nav --save
-`````
+Mine veebisaidile summerproject.web.app ja kasuta :)
 
-Update the imports in node_modules/@angular-material-extensions/faq/esm2015/faq.js
-``````
-import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatExpansionModule } from '@angular/material/expansion';
-``````
+## Kasutamine lokaalselt
+
+1. Lae alla repositoorium: git clone https://github.com/mihkelva/SummerProject.git
+2. Lae alla nodejs: https://nodejs.org/en/
+3. Lae alla nodejs teegid: npm install
+4. Installi Angular: npm install -g @angular/cli
+5. Pane käima lokaalne server käima käsuga: "ng serve" , see peab olema tehtud samas kaustas kus angular.json paikneb (ehk root)
+6. Kasuta pordil: localhost:4200
+
+## Projekti uuendamine Firebase serveris
+
+1. Installi Firebase: npm install -g firebase-tools
+2. Logi sisse: firebase login
+3. Buildi Angulari projekt Firebase jaoks: ng build --prod
+4. Deploy projekt Firebase'i: firebase deploy --except functions
