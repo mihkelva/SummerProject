@@ -40,6 +40,11 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
     this.projectService.updateProject(project.firebaseId, project);
   }
 
+  onDeleteProject(project: Project) {
+    project.deleted = true;
+    this.projectService.updateProject(project.firebaseId, project);
+  }
+
   showCommentAdd(project) {
     project.commentButtonActive = !project.commentButtonActive;
   }
