@@ -50,7 +50,7 @@
                         <button class="btn btn-dti">Sisesta</button>
                     </div>
                 </form>
-                <form (ngSubmit)="onSubmitRegistration(project, registrationForm)" #registrationForm="ngForm">
+                <form (ngSubmit)="onSubmitRegistration(project, registrationForm)" #registrationForm="ngForm" class="forms">
                     <div *ngIf="project.registrationButtonActive && project.students.length < 5">
                         Ees- ja perekonnanimi: <input type="text" class="form-control" ngModel name="student" required>
                         <br>

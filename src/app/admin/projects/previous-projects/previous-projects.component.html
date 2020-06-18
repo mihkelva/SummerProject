@@ -1,9 +1,9 @@
 <div *ngIf="projects.length > 0 && !isFetching">
   <div class="text-center-header">Kõik projektid andmebaasis: </div>
   <br>
-  <mat-form-field>
+  <mat-form-field class="yearFilter">
     <mat-label class="matLabel">Vali projekti aasta</mat-label>
-    <mat-select matInput class="matSelect" [(ngModel)]="chosenYear">
+    <mat-select matInput class="matSelect" [(ngModel)]="chosenYear" >
       <mat-option *ngFor="let project of projects | unique" [value]="project.year" class="matOption">{{project.year}}</mat-option>
     </mat-select>
   </mat-form-field>
