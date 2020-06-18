@@ -7,7 +7,6 @@
     border: none;
     color: white;
     padding-top: 5px;
-    padding: 10px 10px;
     margin: 2px;
     cursor: pointer;
 }
@@ -18,5 +17,18 @@
     color: #333333;
     font-size: large;
     font-weight: bold;
-    padding-top: 5px;
+}
+
+.btn {
+    color: #4e4e4e !important;
+    background-color: #ffffff !important;
+    border-color: #4e4e4e !important;
+    border-radius: 100%;
+}
+
+.btn:hover {
+    color: #ffffff !important;
+    background-color: #75b6ab !important;
+    border-color: #6bcaba !important;
+    border-radius: 100%;
 }

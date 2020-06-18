@@ -12,7 +12,11 @@ export class MenuComponent implements OnInit {
   isBackMenu: boolean = false;
   isAdminMenu: boolean = false;
 
+  
+
   constructor(private router: Router, private authService: AuthService ) { }
+
+  
 
   ngOnInit(): void {
       this.router.events.subscribe((routerData) => {
