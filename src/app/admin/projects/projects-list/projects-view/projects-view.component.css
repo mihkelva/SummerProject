@@ -9,9 +9,9 @@
 }
 
 .header-project-name {
-  text-align: center;
-  font-size: 5rem;
+  font-size: 2rem;
   margin: auto;
+  width: 20%;
   font-weight: 700;
 }
 
