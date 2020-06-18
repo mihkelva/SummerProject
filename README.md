@@ -26,11 +26,11 @@ Angulari teegid:
 2. animations material cdk - FAQ jaoks
 3. @nicky-lenaers g2-sticky-nav - menüü kerimise jaoks
 
-### Kasutamine veebis
+## Kasutamine veebis
 
 Mine veebisaidile summerproject.web.app ja kasuta :)
 
-#### Kasutamine lokaalselt
+## Kasutamine lokaalselt
 
 1. Lae alla repositoorium: git clone https://github.com/mihkelva/SummerProject.git
 2. Lae alla nodejs: https://nodejs.org/en/
@@ -39,7 +39,7 @@ Mine veebisaidile summerproject.web.app ja kasuta :)
 5. Pane käima lokaalne server käima käsuga: "ng serve" , see peab olema tehtud samas kaustas kus angular.json paikneb (ehk root)
 6. Kasuta pordil: localhost:4200
 
-#### Projekti uuendamine Firebase serveris
+## Projekti uuendamine Firebase serveris
 
 1. Installi Firebase: npm install -g firebase-tools
 2. Logi sisse: firebase login
