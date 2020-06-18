@@ -1,12 +1,4 @@
-.row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
 
-.header {
-  width: 20%;
-}
 
 .header-project-name {
   font-size: 1.5rem;
@@ -17,8 +9,4 @@
 
 label {
   font-weight: 400;
-}
-
-.text-center-header {
-  margin-top: 0px;
 }

@@ -14,6 +14,7 @@ export class ProjectsDetailComponent implements OnInit {
   project: Project;
   id: string;
   error: string;
+  isSaving = false;
 
   editMode = false;
   projectForm: FormGroup;
@@ -49,6 +50,7 @@ export class ProjectsDetailComponent implements OnInit {
     let contactName = "";
     let contactPhone = "";
     let contactEmail = "";
+    let overviewer = "";
 
     const project = this.projectService.getProject(this.id);
     projectName = project.name;
@@ -58,6 +60,7 @@ export class ProjectsDetailComponent implements OnInit {
     contactName = project.contactName;
     contactEmail = project.contactEmail;
     contactPhone = project.contactPhone;
+    overviewer = project.overviewer;
 
     this.projectForm = new FormGroup({
       contactName: new FormControl(contactName, Validators.required),
@@ -67,14 +70,20 @@ export class ProjectsDetailComponent implements OnInit {
       description: new FormControl(projectDescription, Validators.required),
       support: new FormControl(support),
       additional: new FormControl(additional),
-      overviewer: new FormControl()
+      overviewer: new FormControl(overviewer)
     })
   }
 
-  onSubmit() {
-    this.projectForm.value.id = this.id;
-    this.projectService.updateProject(this.id, this.projectForm.value);
-    this.router.navigate(['/admin/projects'], {relativeTo: this.route});
+  onSubmit(projectForm) {
+    console.log(projectForm);
+    console.log(projectForm.value)
+    this.projectService.updateProject(this.id, projectForm.value);
+    this.isSaving = true;
+    setTimeout(() => {
+      this.isSaving = false;
+      this.router.navigate(['/admin/projects'], {relativeTo: this.route});
+    }, 1000);
+    
   }
 
 }

@@ -4,9 +4,11 @@
 <div class="header-project-name"> {{ project.name }} </div>
 
 <br>
+<div *ngIf="isSaving" class="text-center-header" style="text-align: center;">  <app-loading-spinner></app-loading-spinner></div>
+<br>
 <div class="row">
     <div class="col-xs-12">
-            <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="projectForm" (ngSubmit)="onSubmit(projectForm)">
             <div 
                 class="list-group-item clearfix" 
                 *ngIf="!project.deleted">
@@ -47,3 +49,4 @@
             </form>
     </div>
 </div>
+
