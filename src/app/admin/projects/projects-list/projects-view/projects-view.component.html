@@ -12,7 +12,7 @@
             <b>{{ student.name }}</b>
           </span>
         </span>
-        <span *ngIf="!project.students">
+        <span *ngIf="!project.students || project.students == []">
           <br> <span><i>Üliõpilasi pole veel registreerunud</i></span>
         </span>
       </div> <hr>

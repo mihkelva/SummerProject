@@ -1,5 +1,4 @@
 export class Project {
-    public insertedDate: Date;
     public contactName: string;
     public contactPhone: string;
     public contactEmail: string;
@@ -7,6 +6,7 @@ export class Project {
     public description: string;
     public additional: string;
     public support: string;
+    public insertedDate: Date;
     public deleted: boolean;
     public visible: boolean;
     public comments: string[];
@@ -19,17 +19,17 @@ export class Project {
     public firebaseId?: string;
 
     constructor(
-        recipient_name: string, 
-        recipient_phone: string, 
-        recipient_email: string,
+        contactName: string, 
+        contactPhone: string, 
+        contactEmail: string,
         name: string,
         description: string,
         additional: string,
         support: string){
             this.insertedDate = new Date();
-            this.contactName = recipient_name;
-            this.contactPhone = recipient_phone;
-            this.contactEmail = recipient_email;
+            this.contactName = contactName;
+            this.contactPhone = contactPhone;
+            this.contactEmail = contactEmail;
             this.name = name;
             this.description = description;
             this.additional = additional;
