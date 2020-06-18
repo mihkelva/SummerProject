@@ -33,7 +33,7 @@
                     <button *ngIf="!project.github || !project.blog || !project.url" class="btn btn-dti" (click)="showCommentInfo(project)">Lisa projekti info</button>
                     <button *ngIf="project.students.length < 5" class="btn btn-dti" (click)="showRegisterButton(project)">Registreeru projekti</button><span>Registreerunuid: {{ project.students.length }}  /5</span>
                 </div>
-                <form (ngSubmit)="onSubmitInfo(project, infoForm)" #infoForm="ngForm">
+                <form (ngSubmit)="onSubmitInfo(project, infoForm)" #infoForm="ngForm" class="forms">
                     <div *ngIf="project.addInfoButtonActive && (!project.github || !project.blog || !project.url)">
                         <div *ngIf="!project.github">
                             Githubi link: <input type="text" class="form-control" ngModel name="github">
