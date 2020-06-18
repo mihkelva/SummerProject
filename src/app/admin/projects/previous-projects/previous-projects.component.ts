@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Project } from 'src/app/new-project/project.model';
 import { ProjectService } from 'src/app/project.service';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-previous-projects',
@@ -20,7 +19,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
     this.projectService.fetchProjects().subscribe(projects => {
       this.isFetching = false;
       let allProjects = projects;
-      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : 2020}));
+      this.projects = allProjects.map(prj => ({...prj, year: prj.year ? prj.year : 'Pole alustatud'}));
     }, error => {
       this.isFetching = false;
       this.error = error;

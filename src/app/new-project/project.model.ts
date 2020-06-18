@@ -15,7 +15,7 @@ export class Project {
     public blog: string;
     public url: string;
     public overviewer: string;
-    public year: number;
+    public year: string;
     public firebaseId?: string;
 
     constructor(
