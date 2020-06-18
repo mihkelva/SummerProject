@@ -12,14 +12,21 @@
                               type="checkbox">
                           <div class="list-group-item-header">
                               <div class="list-group-item-date">
-                                  Projekti aasta: {{ project.year }}
+                                  Projekti aasta: 
+                                  <span *ngIf="project.year != 'Pole alustatud'"> {{ project.year }} </span>
+                                  <span *ngIf="project.year == 'Pole alustatud'"> <i>{{ project.year }} </i></span>
                               </div>
                               <div class="list-group-item-name">
                                   Projekti nimi: <b> {{ project.name }} </b>
                               </div>
                               <div class="list-group-item-users">
                                 Projekti tegijad: <b> 
-                                    <span *ngFor="let student of project.students">{{ student.name }}, </span></b>
+                                    <span *ngFor="let student of project.students; let i = index">
+                                        {{ student.name }} {{i === project.students.length -1 ? '' : ',&nbsp;' }}
+                                    </span></b>
+                                    <span *ngIf="!project.students && project.year == 'Pole alustatud'">
+                                       <i>Keegi pole registreerunud</i> 
+                                    </span>
                             </div>
                           </div>
                 </label>

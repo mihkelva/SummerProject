@@ -90,7 +90,7 @@ export class UserProjectsComponent implements OnInit {
       project.students.push({name: form.value.student, suund: form.value.suund});
       form.reset();
       // for form year in archive
-      project.year = this.year;
+      project.year = this.year.toString();
       this.projectService.updateProject(project.firebaseId, project);
     }
   }
