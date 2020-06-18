@@ -1,10 +1,23 @@
+<lib-toastify-toast-container 
+[position]="'bottom-right'"
+[transition]="'bounce'" 
+[autoClose]="5000"
+[hideProgressBar]="false"
+[newestOnTop]="false"
+[closeOnClick]="true"
+[pauseOnHover]="true"
+[pauseOnVisibilityChange]="true"
+[iconLibrary]="'material'"
+></lib-toastify-toast-container>
+
 <div class="text-center-header">Kõik saadavalolevad projektid aastal {{ year }}: </div>
 <br>
 <div class="rectangle"></div>
 <br>
 <div class="row">
     <div class="col-xs-12">
-        <ng-container *ngFor="let project of projects">
+        <ng-container 
+            *ngFor="let project of projects">
             <div class="list-group-item clearfix" *ngIf="project.visible">
                 <div>
                     <label>
@@ -17,8 +30,41 @@
                     </label>
                 </div>
                 <div class="registrations">
-                    <button class="btn btn-dti">Registreeru projekti</button><span>Registreerunuid: 0/5</span>
+                    <button *ngIf="!project.github || !project.blog || !project.url" class="btn btn-dti" (click)="showCommentInfo(project)">Lisa projekti info</button>
+                    <button *ngIf="project.students.length < 5" class="btn btn-dti" (click)="showRegisterButton(project)">Registreeru projekti</button><span>Registreerunuid: {{ project.students.length }}  /5</span>
                 </div>
+                <form (ngSubmit)="onSubmitInfo(project, infoForm)" #infoForm="ngForm">
+                    <div *ngIf="project.addInfoButtonActive && (!project.github || !project.blog || !project.url)">
+                        <div *ngIf="!project.github">
+                            Githubi link: <input type="text" class="form-control" ngModel name="github">
+                            <br>
+                        </div>
+                        <div *ngIf="!project.blog">
+                        Blogi link: <input type="text" class="form-control" ngModel name="blog">
+                        <br>
+                        </div>
+                        <div *ngIf="!project.url">
+                        URL link: <input type="text" class="form-control" ngModel name="url">
+                        <br>
+                        </div>
+                        <button class="btn btn-dti">Sisesta</button>
+                    </div>
+                </form>
+                <form (ngSubmit)="onSubmitRegistration(project, registrationForm)" #registrationForm="ngForm">
+                    <div *ngIf="project.registrationButtonActive && project.students.length < 5">
+                        Ees- ja perekonnanimi: <input type="text" class="form-control" ngModel name="student" required>
+                        <br>
+                        Õppesuund:
+                        <mat-form-field>
+                            <mat-label class="matLabel">Vali suund</mat-label>
+                            <mat-select matInput class="matSelect" ngModel name="suund" required>
+                              <mat-option *ngFor="let suund of suunds" [value]="suund" class="matOption">{{suund}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        <br>
+                        <button [disabled]="!registrationForm.valid" class="btn btn-dti">Registreeru</button>
+                    </div>
+                </form>
             </div>
         </ng-container>
     </div>

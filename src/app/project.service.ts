@@ -8,48 +8,28 @@ import { map } from 'rxjs/internal/operators/map';
 export class ProjectService {
     projectsChanged = new Subject<Project[]>();
     error = new Subject<string>();;
+    private projects: Project[] = [];
 
     constructor(private http: HttpClient){}
 
-    private projects: Project[] = [];
-
-    // addProject(newProject: Project) {
-    //     this.projects.push(newProject);
-    //     this.projectsChanged.next(this.projects.slice());
-    // }
-    
-    // setProjects(projects: Project[]) {
-    //     this.projects = projects;
-    //     this.projectsChanged.next(this.projects.slice());
-    // }
-
-    // updateProject(index: string, updatedProject: Project) {
-    //     this.projects[index] = updatedProject;
-    //     this.projectsChanged.next(this.projects.slice());
-    // }
-
     updateProject(index: string, updatedProject: Project) {
-        this.http.patch('https://summerproject-a6747.firebaseio.com/projects.json', updatedProject)
-        // this.projects[index] = updatedProject;
-        // this.projectsChanged.next(this.projects.slice());
+        this.projects[index] = updatedProject;
+        this.projectsChanged.next(this.projects.slice());
+        this.saveProjects(this.projects);
     }
 
     getProjects() {
-      
       return this.projects.slice();
     }
 
     getProject(index: string) {
-        console.log(this.projects);
         this.fetchProjects();
-        console.log(this.projects);
         return this.projects.find(project => project.firebaseId === index);
     }
 
     uploadProject(newProject: Project) {
         this.http.post('https://summerproject-a6747.firebaseio.com/projects.json', newProject).subscribe(
         responseData => {
-          console.log(responseData);
         }),
         error => {
             this.error.next(error.message);
@@ -81,7 +61,6 @@ export class ProjectService {
           'https://summerproject-a6747.firebaseio.com/projects.json',
           projects)
       .subscribe(response => {
-          console.log(response);
       });
     }
 }

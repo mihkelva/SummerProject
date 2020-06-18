@@ -58,6 +58,7 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import { SuccessModalComponent } from './shared/success-modal/success-modal.component';
 import { StickyNavModule } from 'ng2-sticky-nav';
 import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { FilterByYearPipe } from './admin/projects/previous-projects/filter-by-year.pipe';
 
 
 @NgModule({
@@ -87,7 +88,8 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     NewUserComponent,
     LoadingSpinnerComponent,
     SuccessModalComponent,
-    ScrollTopComponent
+    ScrollTopComponent,
+    FilterByYearPipe,
   ],
   imports: [
     GalleryModule.forRoot(),

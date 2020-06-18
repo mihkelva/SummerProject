@@ -18,6 +18,13 @@
   background: none;
 }
 
+.list-group-item-delete-button:hover {
+  transform: scale(1.4);
+  transition: .3s all;
+  transition: transform 0.3s;
+}
+
+
 .list-group-item {
   margin-left: 10%;
   width: 30%;

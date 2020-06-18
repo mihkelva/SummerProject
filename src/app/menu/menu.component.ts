@@ -35,25 +35,33 @@ export class MenuComponent implements OnInit {
             this.isHomeMenu=false;
            }
            if(routerData.url === '/admin/projects' ||
-              routerData.url === '/admin/faq' ||
               routerData.url === '/admin/projects/new' ||
               routerData.url === '/admin/previous' ||
-              routerData.url === '/admin/users' ||
-              routerData.url === '/admin/users/new'  ||
-              routerData.url === '/admin/users/list'){
+              routerData.url === '/admin/projects/view/0' ||
+              routerData.url === '/admin/projects/edit/0' ||
+              routerData.url === '/admin/projects/view/1' ||
+              routerData.url === '/admin/projects/edit/1') {
             this.isAdminMenu=true;
            } else {
             this.isAdminMenu=false;
            }
+           if(routerData.url !== '/admin/projects' &&
+              routerData.url !== '/admin/projects/new' &&
+              routerData.url !== '/admin/previous' &&
+              routerData.url !== '/admin/projects/view/0' &&
+              routerData.url !== '/admin/projects/edit/0' &&
+              routerData.url !== '/admin/projects/view/1' &&
+              routerData.url !== '/admin/projects/edit/1' &&
+              routerData.url !== '/new' && 
+              routerData.url !== '/admin' && 
+              routerData.url !== '/user' &&
+              routerData.url !== '/user/projects') {
+            this.isHomeMenu=true;
+           } else {
+            this.isHomeMenu=false;
+           }
       } 
     })
-  }
-
-  
-
-  scroll(el: HTMLElement) {
-    console.log(el);
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
   onLogout() {

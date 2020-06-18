@@ -1,6 +1,6 @@
-/* .notDeleted {
-  border: solid 2px red;
-} */
+.isDeleted {
+  border: solid 2px rgb(241, 121, 121);
+}
 
 .notDeleted {
   border: solid 2px #75b6ab;

@@ -3,19 +3,18 @@
     <br>
     <div class="row">
         <div class="col-xs-12">
-            <ng-container *ngFor="let project of projects" >
+            <ng-container *ngFor="let project of projects">
                 <div
                     class="list-group-item clearfix" 
                     [ngClass]="[project.visible ? 'isActive' : 'notActive']"
                     *ngIf="!project.deleted">
                     <div>
-                        <label>
+                        <label (change)="saveOnClick(project)">
                             <input
-                                [(ngModel)]="project.visible"
                                 type="checkbox">
                             <div class="list-group-item-header">
                                 <div class="list-group-item-date">
-                                    Esitatud: 12.06.2020
+                                    Esitatud: {{ project.insertedDate | date:'dd.MM.yyyy'}}
                                 </div>
                                 <button
                                     *ngIf="!project.visible"
@@ -55,7 +54,7 @@
                             <button (click)="onDeleteComment(project, i) " class=closeButton>x</button> {{ comment }}
                         </div>
                         <form (ngSubmit)="onAddQuestion(project, projectsForm)" #projectsForm="ngForm">
-                            <div *ngIf="project.commentButtonActive" class="extraQuestion">
+                            <div *ngIf="project.commentButtonActive && !project.visible" class="extraQuestion">
                                 <input type="text" class="form-control" ngModel name="itemQuestion">
                                 <button class="btn btn-dti">✓</button>
                             </div>

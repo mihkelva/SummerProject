@@ -3,22 +3,23 @@
   <br>
   <div class="row">
       <div class="col-xs-12">
-          <ng-container *ngFor="let project of projects" >
+          <ng-container *ngFor="let project of projects">
               <label
+                  (change)="saveOnClick(project)"
                   class="list-group-item clearfix" 
                   [ngClass]="[project.deleted ? 'isDeleted' : 'notDeleted']">
                           <input
-                              [(ngModel)]="project.deleted"
                               type="checkbox">
                           <div class="list-group-item-header">
                               <div class="list-group-item-date">
-                                  Projekti aasta: {{ project.date }}
+                                  Projekti aasta: {{ project.year }}
                               </div>
                               <div class="list-group-item-name">
                                   Projekti nimi: <b> {{ project.name }} </b>
                               </div>
                               <div class="list-group-item-users">
-                                Projekti tegijad: <b> {{ project.users }} </b>
+                                Projekti tegijad: <b> 
+                                    <span *ngFor="let student of project.students">{{ student.name }}, </span></b>
                             </div>
                           </div>
                 </label>

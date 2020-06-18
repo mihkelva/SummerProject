@@ -29,16 +29,13 @@ export class AdminComponent implements OnInit {
     }
     this.isLoading = true;
     let authObs: Observable<AuthResponseData>;
-    console.log(loginForm.value)
     authObs = this.authService.login(loginForm.value.username, loginForm.value.password);
     authObs.subscribe(
       resData => {
-        console.log(resData);
         this.isLoading = false;
         this.router.navigate(["projects"], { relativeTo: this.route });
       },
       errorMessage => {
-        console.log(errorMessage);
         this.error = errorMessage;
         this.isLoading = false;
       }
