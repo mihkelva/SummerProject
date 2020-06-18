@@ -3,12 +3,8 @@
   <br>
   <mat-form-field class="yearFilter">
     <mat-label class="matLabel">Vali projekti aasta</mat-label>
-<<<<<<< HEAD
     <mat-select matInput class="matSelect" [(ngModel)]="chosenYear">
       <mat-option [value]="" class="matOption">{{ 'Kõik' }}</mat-option>
-=======
-    <mat-select matInput class="matSelect" [(ngModel)]="chosenYear" >
->>>>>>> b34533f05b06ac0dcba7b8967fd9f66277c3c145
       <mat-option *ngFor="let project of projects | unique" [value]="project.year" class="matOption">{{project.year}}</mat-option>
     </mat-select>
   </mat-form-field>
