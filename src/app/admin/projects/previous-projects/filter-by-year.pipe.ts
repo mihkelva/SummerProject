@@ -6,9 +6,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterByYearPipe implements PipeTransform {
 
-  transform(value: Project[], year: number): Project[] {
-    // let filteredArray = value.forEach()
-    return null;
+  transform(value: Project[], year: string): Project[] {
+    let filteredArray = value.filter(function (project) {
+      if (project.year != 'Pole alustatud' ){
+        let yearAsNumber = Number(project.year);
+        return yearAsNumber == Number(year);
+      } else {
+        return 'Pole alustatud' == year;
+      }
+    })
+    if (year == null) {
+      return value;
+    } else {
+      return filteredArray;
+    }
   }
 
 }
