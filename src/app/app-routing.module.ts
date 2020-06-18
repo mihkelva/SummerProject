@@ -19,7 +19,7 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 const appRoutes: Routes = [
     {path: 'home', component: HomeComponent },
     {path: 'new', component: NewProjectComponent},
-    {path: 'user', component: UserComponent},
+    // {path: 'user', component: UserComponent},
     {path: 'user/projects', component: UserProjectsComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'admin/projects', component: ProjectsListComponent, canActivate: [AuthGuard] },
@@ -28,9 +28,9 @@ const appRoutes: Routes = [
     {path: 'admin/projects/view/:id', component: ProjectsViewComponent, canActivate: [AuthGuard] },
     {path: 'admin/faq', component: FaqAddComponent, canActivate: [AuthGuard] },
     {path: 'admin/previous', component: PreviousProjectsComponent, canActivate: [AuthGuard] },
-    {path: 'admin/users', component: AdminUsersComponent, canActivate: [AuthGuard] },
-    {path: 'admin/users/list', component: UsersListComponent, canActivate: [AuthGuard] },
-    {path: 'admin/users/new', component: NewUserComponent, canActivate: [AuthGuard] },
+    // {path: 'admin/users', component: AdminUsersComponent, canActivate: [AuthGuard] },
+    // {path: 'admin/users/list', component: UsersListComponent, canActivate: [AuthGuard] },
+    // {path: 'admin/users/new', component: NewUserComponent, canActivate: [AuthGuard] },
     {path: '**', redirectTo: '/home' },
     {path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
