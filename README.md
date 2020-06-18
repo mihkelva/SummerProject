@@ -1,13 +1,4 @@
-# SummerProject
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-----------------------------------------------------------------------------------------------------------------
-## Veebileht tarkvaraprojektide toetuseks juhend
+## Veebileht tarkvaraprojektide toetuseks
 
 Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames. Valisime oma praktikaks teha veebileht selle aine tarvis.
 
@@ -17,6 +8,18 @@ Projekti koostasid:
 1. Mihkel Vaher
 2. Kristjan Luur
 3. Cornelia Tšaplõgin
+
+----------------------------------------------------------------------------------------------------------------
+
+# SummerProject
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+----------------------------------------------------------------------------------------------------------------
 
 ### Karusell-galerii
 Requires:
