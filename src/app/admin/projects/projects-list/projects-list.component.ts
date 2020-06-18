@@ -56,6 +56,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
         pr.comments.push(itemQuestion);
       }
     });
+    form.reset();
     this.projectService.updateProject(project.firebaseId, project);
   }
 
