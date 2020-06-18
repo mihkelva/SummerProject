@@ -40,3 +40,8 @@
 .formStyle {
     min-width: 250px;
 }
+
+ngg-deep .toast-container .toast-container--bottom-right {
+    bottom: 0 !important;
+    right: 0 !important;
+}
