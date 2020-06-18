@@ -24,6 +24,7 @@
     background-color: #ffffff !important;
     border-color: #4e4e4e !important;
     border-radius: 100%;
+    transition: background-color .2s, border-color .2s;
 }
 
 .btn:hover {
