@@ -9,6 +9,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ----------------------------------------------------------------------------------------------------------------
 ## Veebileht tarkvaraprojektide toetuseks juhend
 
+Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames. Valisime oma praktikaks teha veebileht selle aine tarvis.
+
+Veebileht annab võimaluse inimestel esitada oma projektiideed ning tudengitele neid teostada. Õppejõule, kes projektiga tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Kogudes kõik ideed ning saates need ka automaatselt meilile, saab kõik ühest kohast. Samuti kogub ta varasemaid projekte ning arhiveerib nad. Tudeng saab end rühmadesse registreerida siinsamas lehel.
+
+Projekti koostasid:
+1. Mihkel Vaher
+2. Kristjan Luur
+3. Cornelia Tšaplõgin
+
 ### Karusell-galerii
 Requires:
 ```
