@@ -1,3 +1,16 @@
+## Veebileht tarkvaraprojektide toetuseks
+
+Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames. Valisime oma praktikaks teha veebileht selle aine tarvis.
+
+Veebileht annab võimaluse inimestel esitada oma projektiideed ning tudengitele neid teostada. Õppejõule, kes projektiga tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Kogudes kõik ideed ning saates need ka automaatselt meilile, saab kõik ühest kohast. Samuti kogub ta varasemaid projekte ning arhiveerib nad. Tudeng saab end rühmadesse registreerida siinsamas lehel.
+
+Projekti koostasid:
+1. Mihkel Vaher
+2. Kristjan Luur
+3. Cornelia Tšaplõgin
+
+----------------------------------------------------------------------------------------------------------------
+
 # SummerProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
@@ -7,7 +20,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ----------------------------------------------------------------------------------------------------------------
-## Veebileht tarkvaraprojektide toetuseks juhend
 
 ### Karusell-galerii
 Requires:

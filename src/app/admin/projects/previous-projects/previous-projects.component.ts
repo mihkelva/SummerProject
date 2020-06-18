@@ -11,6 +11,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [];
   isFetching = false;
   error = null;
+  chosenYear: string;
 
   constructor(private projectService: ProjectService) { }
 
@@ -29,6 +30,7 @@ export class PreviousProjectsComponent implements OnInit, OnDestroy {
   saveOnClick(project: Project) {
     project.deleted = !project.deleted;
     this.projectService.updateProject(project.firebaseId, project);
+    console.log(this.chosenYear);
   }
 
   ngOnDestroy(): void {
