@@ -4,6 +4,8 @@ Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Ta
 
 Veebileht annab võimaluse kõigil inimestel esitada oma projektiideid ning tudengitele neid teostamiseks välja valida. Õppejõule, kes projektide haldamistega tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Projekt toimib ka arhiivina ehk kõik projektid, ka varasematest aastatest, on koos aasta, nimetuse, tegijate, kirjelduse ja kõikvõimalike linkidega lihtsasti kättesaadav. Tudeng saab end vastavasse projekti registreerida, õppejõud seda näha.
 
+https://docs.google.com/presentation/d/1q8f-27p778bQxI4oEl-MwfvJZHJIfuAumwo_S-1VetA/edit#slide=id.g89091075f0_0_75
+
 Projekt on valminud kolme Tallinna Ülikooli õppeaine raames:
 1. Interaktsioonidisain (valmis prototüüp)
 2. Sissejuhatus infosüsteemidesse
