@@ -10,7 +10,7 @@ Projekti koostasid:
 3. Cornelia Tšaplõgin
 
 
-<img src="./pilt.jpg" alt="pilt" width="800" height="360">
+<img src="./pilt.JPG" alt="pilt" width="800" height="360">
 
 ----------------------------------------------------------------------------------------------------------------
 
