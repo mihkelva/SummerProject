@@ -2,7 +2,12 @@
 
 Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames. Valisime oma praktikaks teha veebileht selle aine tarvis.
 
-Veebileht annab võimaluse inimestel esitada oma projektiideed ning tudengitele neid teostada. Õppejõule, kes projektiga tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Kogudes kõik ideed ning saates need ka automaatselt meilile, saab kõik ühest kohast. Samuti kogub ta varasemaid projekte ning arhiveerib nad. Tudeng saab end rühmadesse registreerida siinsamas lehel.
+Veebileht annab võimaluse kõigil inimestel esitada oma projektiideed ning tudengitele neid teostamiseks välja valida. Õppejõule, kes projektide haldamistega tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Projekt toimib ka arhiivina ehk kõik projektid, ka varasematest aastatest, on koos aasta, nimetuse, tegijate, kirjelduse ja kõikvõimalike linkidega lihtsasti kättesaadav. Tudeng saab end vastavasse projekti registreerida, õppejõud seda näha.
+
+Projekt on valminud kolme Tallinna Ülikooli õppeaine raames:
+1. Interaktsioonidisain (valmis prototüüp)
+2. Sissejuhatus infosüsteemidesse
+3. Tarkvaraprojekt
 
 Projekti koostasid:
 1. Mihkel Vaher
