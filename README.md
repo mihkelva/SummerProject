@@ -1,8 +1,8 @@
 ## Veebileht tarkvaraprojektide toetuseks
 
-Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames. Valisime oma praktikaks teha veebileht selle aine tarvis.
+Oleme Tallinna Ülikooli informaatika tudengid, kes tegid selle tarkvara aine Tarkvaraarenduse praktika raames.
 
-Veebileht annab võimaluse kõigil inimestel esitada oma projektiideed ning tudengitele neid teostamiseks välja valida. Õppejõule, kes projektide haldamistega tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Projekt toimib ka arhiivina ehk kõik projektid, ka varasematest aastatest, on koos aasta, nimetuse, tegijate, kirjelduse ja kõikvõimalike linkidega lihtsasti kättesaadav. Tudeng saab end vastavasse projekti registreerida, õppejõud seda näha.
+Veebileht annab võimaluse kõigil inimestel esitada oma projektiideid ning tudengitele neid teostamiseks välja valida. Õppejõule, kes projektide haldamistega tegeleb, on tegu rakendusega, mis projektide valimise oluliselt kergemaks teeb. Projekt toimib ka arhiivina ehk kõik projektid, ka varasematest aastatest, on koos aasta, nimetuse, tegijate, kirjelduse ja kõikvõimalike linkidega lihtsasti kättesaadav. Tudeng saab end vastavasse projekti registreerida, õppejõud seda näha.
 
 Projekt on valminud kolme Tallinna Ülikooli õppeaine raames:
 1. Interaktsioonidisain (valmis prototüüp)
