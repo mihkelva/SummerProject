@@ -9,6 +9,9 @@ Projekti koostasid:
 2. Kristjan Luur
 3. Cornelia Tšaplõgin
 
+
+<img src="./pilt.jpg" alt="pilt" width="800" height="360">
+
 ----------------------------------------------------------------------------------------------------------------
 
 # SummerProject
