@@ -9,11 +9,14 @@ Projekti koostasid:
 2. Kristjan Luur
 3. Cornelia Tšaplõgin
 
+
+<img src="./pilt.jpg" alt="pilt" width="800" height="360">
+
 ----------------------------------------------------------------------------------------------------------------
 
 # SummerProject
 
-Projekt on koostatud Angulari versioon 9.1.6 abil ja kasutatud on Firebase andmebaasi (database), serverit (hosting) ja autentikeerimist (authentication).
+Projekt on koostatud Angulari versioon 9.1.6 abil ja kasutatud on Firebase andmebaasi (database), serverit (hosting) ja autentiseerimist (authentication).
 
 ## Kasutatud tehnoloogiad
 
