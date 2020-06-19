@@ -48,3 +48,6 @@ Mine veebisaidile summerproject.web.app ja kasuta :)
 2. Logi sisse: firebase login
 3. Buildi Angulari projekt Firebase jaoks: ng build --prod
 4. Deploy projekt Firebase'i: firebase deploy --except functions
+
+
+<a href="./LICENSE.txt">MIT LICENSE</a>
